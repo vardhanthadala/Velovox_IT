@@ -299,3 +299,95 @@ article p {
     font-size: 7.5rem !important;
   }
 }
+
+
+/* ==========================================================================
+   VELOVOX MODERN IT ENTERPRISE COLOR SYSTEM (ELIMINATES HARSH BLACKNESS)
+   ========================================================================== */
+
+:root {
+  /* Modern Tech Color Palette */
+  --vx-primary: #2563EB;          /* Electric Blue */
+  --vx-primary-hover: #1D4ED8;    /* Deep Royal Blue */
+  --vx-primary-light: #3B82F6;    /* Vibrant Blue */
+  --vx-cyan: #06B6D4;             /* Cyber Cyan */
+  --vx-indigo: #4F46E5;           /* Tech Indigo */
+  --vx-slate-900: #0F172A;        /* Rich Slate (replaces harsh #000) */
+  --vx-slate-950: #0B1120;        /* Deep Midnight Navy */
+  --vx-slate-800: #1E293B;        /* Elevated Slate */
+  --vx-slate-50: #F8FAFC;         /* Crisp Soft White Background */
+}
+
+/* 1. REPLACE HARSH BLACK SECTIONS WITH DEEP MIDNIGHT NAVY / SLATE GRADIENT */
+section.bg-black,
+.bg-black:not(a):not(button) {
+  background: radial-gradient(circle at 50% 10%, #1e293b 0%, #0f172a 60%, #0b1120 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 2. TRANSFORM PRIMARY CTA BUTTONS INTO VIBRANT ELECTRIC BLUE */
+a[href*="contact"],
+a.bg-black,
+button.bg-black,
+.btn-primary-tech {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.35) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+a[href*="contact"]:hover,
+a.bg-black:hover,
+button.bg-black:hover,
+.btn-primary-tech:hover {
+  background: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%) !important;
+  box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.5) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* 3. HERO & HEADLINE ACCENT - MODERN BLUE/CYAN GRADIENT TEXT ON ITALIC WORDS */
+h1 span.italic,
+h2 span.italic,
+h3 span.italic {
+  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+}
+
+/* 4. STAT NUMERALS GLOW WITH ELECTRIC BLUE GRADIENT */
+.stat-numeral,
+h2.text-5xl,
+span[class*="text-5xl"] {
+  background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 5. FOOTER STYLING - REFINED MIDNIGHT NAVY */
+footer.bg-black,
+footer {
+  background: #0B1120 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 6. SOFTEN BODY TEXT & HEADINGS FROM PITCH BLACK TO REFINED TECH SLATE */
+h1.text-black,
+h2.text-black,
+h3.text-black,
+h4.text-black {
+  color: #0F172A !important;
+}
+
+/* 7. CARD HOVER EFFECTS WITH BLUE ACCENTS */
+article:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+article h4:hover {
+  color: #2563EB !important;
+  transition: color 0.2s ease;
+}
