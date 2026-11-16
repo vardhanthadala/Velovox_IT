@@ -557,3 +557,42 @@ footer.site-clean-footer .footer-nav-cols {
     gap: 32px 40px !important;
   }
 }
+
+
+/* ==========================================================================
+   VIOLET ACCENT & MARQUEE ENHANCEMENTS
+   ========================================================================== */
+h1 span.italic,
+h2 span.italic,
+h3 span.italic {
+  color: #7C3AED !important;
+  font-style: italic !important;
+}
+
+.animate-infinite-scroll img {
+  height: 36px !important;
+  width: auto !important;
+  max-width: none !important;
+  display: inline-block !important;
+  opacity: 0.75 !important;
+  filter: grayscale(100%) !important;
+  transition: opacity 0.2s ease, filter 0.2s ease !important;
+}
+
+.animate-infinite-scroll img:hover {
+  opacity: 1 !important;
+  filter: grayscale(0%) !important;
+}
+
+/* Explore projects / Primary CTA button violet */
+a.bg-black[href*="portfolio"],
+.bg-black:is(button, a)[href*="portfolio"] {
+  background-color: #7C3AED !important;
+  color: #FFFFFF !important;
+  border-color: #7C3AED !important;
+}
+
+a.bg-black[href*="portfolio"]:hover,
+.bg-black:is(button, a)[href*="portfolio"]:hover {
+  background-color: #6D28D9 !important;
+}
