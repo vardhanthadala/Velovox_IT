@@ -569,30 +569,177 @@ h3 span.italic {
   font-style: italic !important;
 }
 
+.animate-infinite-scroll {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.animate-infinite-scroll li {
+  margin-inline: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  height: 48px !important;
+}
+
 .animate-infinite-scroll img {
-  height: 36px !important;
+  height: 28px !important;
+  max-height: 28px !important;
   width: auto !important;
-  max-width: none !important;
-  display: inline-block !important;
-  opacity: 0.75 !important;
-  filter: grayscale(100%) !important;
-  transition: opacity 0.2s ease, filter 0.2s ease !important;
+  object-fit: contain !important;
+  display: block !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .animate-infinite-scroll img:hover {
   opacity: 1 !important;
-  filter: grayscale(0%) !important;
+  filter: none !important;
+  transform: scale(1.08) !important;
 }
 
-/* Explore projects / Primary CTA button violet */
-a.bg-black[href*="portfolio"],
+
+/* Hero CTA button sizing refinement (decreased a little bit for sleek modern proportion) */
+main a.group.rounded-full:is([href*="portfolio"], [href*="contact"]),
+a.group.rounded-full.bg-black[href*="portfolio"],
+a.group.rounded-full.border-black[href*="contact"] {
+  padding: 11px 22px !important;
+  font-size: 0.8125rem !important; /* 13px */
+  line-height: 1.25rem !important;
+  gap: 6px !important;
+}
+
+/* Primary CTA solid violet styling */
+a.group.rounded-full.bg-black[href*="portfolio"],
 .bg-black:is(button, a)[href*="portfolio"] {
   background-color: #7C3AED !important;
   color: #FFFFFF !important;
   border-color: #7C3AED !important;
 }
 
-a.bg-black[href*="portfolio"]:hover,
+a.group.rounded-full.bg-black[href*="portfolio"]:hover,
 .bg-black:is(button, a)[href*="portfolio"]:hover {
   background-color: #6D28D9 !important;
+}
+
+/* SVG Arrow icon inside Explore Projects button */
+a.group.rounded-full.bg-black[href*="portfolio"] svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+
+/* Why Partner With Us icons: default sleek gradient, violet on hover */
+article svg path {
+  transition: fill 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+article:hover svg path {
+  fill: #7C3AED !important;
+}
+
+article svg {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+article:hover svg {
+  transform: translateY(-2px) scale(1.05) !important;
+}
+
+/* Testimonial cards uniform height & flex layout */
+.testimonial-swiper .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.testimonial-swiper .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.testimonial-swiper .swiper-slide > div {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+}
+
+.testimonial-swiper .swiper-slide p.mb-8 {
+  flex-grow: 1 !important;
+  margin-bottom: 2rem !important;
+}
+
+/* Testimonial client logos styling */
+.testimonial-swiper .swiper-slide img {
+  height: 28px !important;
+  width: auto !important;
+  max-width: 140px !important;
+  object-fit: contain !important;
+  display: block !important;
+  margin-bottom: 1.5rem !important;
+  opacity: 0.65 !important;
+  filter: grayscale(100%) !important;
+  transition: opacity 0.3s ease, filter 0.3s ease !important;
+}
+
+.testimonial-swiper .swiper-slide:hover img {
+  opacity: 1 !important;
+  filter: grayscale(0%) !important;
+}
+
+/* Ensure Swiper slide content fills 100% height and matches identically across all viewport sizes */
+.testimonial-swiper .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.testimonial-swiper .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.testimonial-swiper .swiper-slide > div,
+.testimonial-swiper .swiper-slide > div.rounded-\[20px\] {
+  height: 100% !important;
+  min-height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  box-sizing: border-box !important;
+}
+
+.testimonial-swiper .swiper-slide p.mb-8 {
+  flex: 1 1 auto !important;
+}
+
+.testimonial-swiper .swiper-slide > div > div:last-child {
+  margin-top: auto !important;
+}
+
+/* Navbar GET STARTED Button brand violet styling (strictly targeting the CTA button, never nav links) */
+header nav ~ div a.rounded-full,
+header a.rounded-full.bg-black[href*="contact"],
+header .flex.items-center.gap-4 a.rounded-full {
+  background-color: #7C3AED !important;
+  color: #FFFFFF !important;
+  border-color: #7C3AED !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+header nav a {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+header nav ~ div a.rounded-full:hover,
+header a.rounded-full.bg-black[href*="contact"]:hover,
+header .flex.items-center.gap-4 a.rounded-full:hover {
+  background-color: #6D28D9 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3) !important;
 }
