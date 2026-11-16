@@ -300,94 +300,260 @@ article p {
   }
 }
 
+.py-3\.5 { padding-block: calc(var(--spacing) * 3.5); }
+.py-3 { padding-block: calc(var(--spacing) * 3); }
+
+@media (min-width: 1024px) {
+  .lg\:py-5 { padding-block: calc(var(--spacing) * 5); }
+  .lg\:py-3\.5 { padding-block: calc(var(--spacing) * 3.5); }
+}
+
+@media (min-width: 1024px) {
+  .lg\:py-3 { padding-block: calc(var(--spacing) * 3); }
+}
+
+
+
+
 
 /* ==========================================================================
-   VELOVOX MODERN IT ENTERPRISE COLOR SYSTEM (ELIMINATES HARSH BLACKNESS)
+   EXACT REPLICATED NAVBAR DROPDOWN MENUS (MATCHING SCREENSHOTS)
    ========================================================================== */
-
-:root {
-  /* Modern Tech Color Palette */
-  --vx-primary: #2563EB;          /* Electric Blue */
-  --vx-primary-hover: #1D4ED8;    /* Deep Royal Blue */
-  --vx-primary-light: #3B82F6;    /* Vibrant Blue */
-  --vx-cyan: #06B6D4;             /* Cyber Cyan */
-  --vx-indigo: #4F46E5;           /* Tech Indigo */
-  --vx-slate-900: #0F172A;        /* Rich Slate (replaces harsh #000) */
-  --vx-slate-950: #0B1120;        /* Deep Midnight Navy */
-  --vx-slate-800: #1E293B;        /* Elevated Slate */
-  --vx-slate-50: #F8FAFC;         /* Crisp Soft White Background */
+.nav-dropdown-parent {
+  position: relative !important;
 }
 
-/* 1. REPLACE HARSH BLACK SECTIONS WITH DEEP MIDNIGHT NAVY / SLATE GRADIENT */
-section.bg-black,
-.bg-black:not(a):not(button) {
-  background: radial-gradient(circle at 50% 10%, #1e293b 0%, #0f172a 60%, #0b1120 100%) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+/* Dropdown menu container aligned cleanly under the menu item */
+.nav-dropdown-menu {
+position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(4px) !important;
+  padding-top: 10px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s !important;
+  z-index: 100 !important;
 }
 
-/* 2. TRANSFORM PRIMARY CTA BUTTONS INTO VIBRANT ELECTRIC BLUE */
-a[href*="contact"],
-a.bg-black,
-button.bg-black,
-.btn-primary-tech {
-  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.35) !important;
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+.nav-dropdown-parent:hover > .nav-dropdown-menu,
+.nav-dropdown-menu:hover {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(0) !important;
+  pointer-events: auto !important;
 }
 
-a[href*="contact"]:hover,
-a.bg-black:hover,
-button.bg-black:hover,
-.btn-primary-tech:hover {
-  background: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%) !important;
-  box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.5) !important;
-  transform: translateY(-1px) !important;
+.nav-dropdown-box {
+width: 256px !important;
+  min-width: 256px !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 14px !important;
+  padding: 8px !important;
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
 }
 
-/* 3. HERO & HEADLINE ACCENT - MODERN BLUE/CYAN GRADIENT TEXT ON ITALIC WORDS */
-h1 span.italic,
-h2 span.italic,
-h3 span.italic {
-  background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+.nav-dropdown-box a {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 10px 14px !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #1E293B !important;
+  text-decoration: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease !important;
+}
+
+.nav-dropdown-box a:hover {
+  background-color: #F8FAFC !important;
+  color: #7C3AED !important;
+  padding-left: 17px !important;
+}
+
+/* ==========================================================================
+   NAVBAR MENU LIST SPACING, COLOR & CHEVRON
+   ========================================================================== */
+header nav ul.nav-menu-list,
+header nav .nav-menu-list {
+  display: flex !important;
+  align-items: center !important;
+  gap: 28px !important;
+}
+
+header nav ul.nav-menu-list > li > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 0.8125rem !important; /* 13px */
+  font-weight: 500 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #111827 !important;
+  padding: 8px 0 !important;
+  white-space: nowrap !important;
+  transition: color 0.2s ease !important;
+}
+
+header nav ul.nav-menu-list > li > a:hover {
+  color: #6B7280 !important;
+}
+
+header nav svg.nav-chevron,
+header nav .nav-chevron {
+  width: 10px !important;
+  height: 10px !important;
+  min-width: 10px !important;
+  min-height: 10px !important;
+  max-width: 10px !important;
+  max-height: 10px !important;
   display: inline-block !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  margin-left: 5px !important;
+  vertical-align: middle !important;
+  transition: transform 0.2s ease !important;
 }
 
-/* 4. STAT NUMERALS GLOW WITH ELECTRIC BLUE GRADIENT */
-.stat-numeral,
-h2.text-5xl,
-span[class*="text-5xl"] {
-  background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.nav-dropdown-parent:hover .nav-chevron {
+  transform: rotate(180deg) !important;
 }
 
-/* 5. FOOTER STYLING - REFINED MIDNIGHT NAVY */
-footer.bg-black,
-footer {
-  background: #0B1120 !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+/* ==========================================================================
+   CLEAN INTEGRATED MINIMAL FOOTER
+   ========================================================================== */
+footer.site-clean-footer {
+  background-color: #0B0F19 !important;
+  color: #94A3B8 !important;
+  padding: 64px 0 40px !important;
+  width: 100% !important;
+  border-top: 1px solid #1E293B !important;
 }
 
-/* 6. SOFTEN BODY TEXT & HEADINGS FROM PITCH BLACK TO REFINED TECH SLATE */
-h1.text-black,
-h2.text-black,
-h3.text-black,
-h4.text-black {
-  color: #0F172A !important;
+footer.site-clean-footer .footer-container {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
 }
 
-/* 7. CARD HOVER EFFECTS WITH BLUE ACCENTS */
-article:hover {
-  transform: translateY(-2px);
-  transition: transform 0.3s ease;
+footer.site-clean-footer a {
+  text-decoration: none !important;
+  color: #94A3B8 !important;
+  transition: color 0.15s ease !important;
 }
 
-article h4:hover {
-  color: #2563EB !important;
-  transition: color 0.2s ease;
+footer.site-clean-footer a:hover {
+  color: #FFFFFF !important;
+}
+
+footer.site-clean-footer .footer-brand-title {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-bottom: 16px !important;
+}
+
+footer.site-clean-footer .footer-brand-desc {
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  color: #94A3B8 !important;
+  max-width: 320px !important;
+  margin-bottom: 20px !important;
+}
+
+footer.site-clean-footer .footer-brand-email {
+  display: inline-block !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  color: #CBD5E1 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+}
+
+footer.site-clean-footer .footer-brand-email:hover {
+  color: #7C3AED !important;
+}
+
+footer.site-clean-footer .footer-col-header {
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #F8FAFC !important;
+  margin-bottom: 16px !important;
+}
+
+footer.site-clean-footer .footer-col-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+footer.site-clean-footer .footer-col-links a {
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  color: #94A3B8 !important;
+}
+
+footer.site-clean-footer .footer-bottom-bar {
+  margin-top: 56px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid #1E293B !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  font-size: 0.8125rem !important;
+  color: #64748B !important;
+}
+
+@media (min-width: 640px) {
+  footer.site-clean-footer .footer-bottom-bar {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+}
+
+footer.site-clean-footer .footer-content-row {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 40px !important;
+}
+
+@media (min-width: 1024px) {
+  footer.site-clean-footer .footer-content-row {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 64px !important;
+  }
+}
+
+footer.site-clean-footer .footer-nav-cols {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 32px 48px !important;
+  flex: 1 !important;
+}
+
+@media (min-width: 640px) {
+  footer.site-clean-footer .footer-nav-cols {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 32px 40px !important;
+  }
 }

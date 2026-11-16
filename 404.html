@@ -12,27 +12,66 @@
   </head>
   <body class="antialiased">
     <div id="root">
-      <header class="sticky top-0 z-50 transition-all duration-300 bg-white">
-        <nav>
-          <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-center justify-between py-4 lg:py-6">
-              <div><a href="/"><img alt="Velovox Logo" class="h-8" src="/images/layout/logo-black.svg" /></a></div>
-              <div class="flex gap-3 lg:gap-5 items-center">
-                <a class="px-5 py-2.5 bg-black text-xs lg:text-sm font-medium text-white rounded-full hover:bg-gray-800 transition" href="/">Back to Home</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <header class="sticky top-0 z-50 transition-all duration-300 bg-white"><nav><div class="max-w-7xl mx-auto px-6"><div class="flex items-center justify-between py-3.5 lg:py-4.5"><div><a href="/" data-discover="true"><img alt="Velovox Logo" class="h-8" src="/images/layout/logo-black.svg"></a></div><div class="hidden lg:block"><ul class="nav-menu-list flex space-x-7 items-center">
+  <li>
+    <a class="group py-2.5 inline-block uppercase font-normal text-black hover:text-gray-500" href="/" data-discover="true">
+      <span class="relative inline-block overflow-hidden "><span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Home</span><span class="absolute top-0 left-0 block w-full transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0">Home</span></span>
+    </a>
+  </li>
+  <li>
+    <a class="group py-2.5 inline-block uppercase font-normal text-black hover:text-gray-500" href="/about" data-discover="true">
+      <span class="relative inline-block overflow-hidden "><span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">About</span><span class="absolute top-0 left-0 block w-full transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0">About</span></span>
+    </a>
+  </li>
+  <li class="relative nav-dropdown-parent group/drop">
+    <a class="group py-2.5 inline-flex items-center gap-1.5 uppercase font-normal text-black hover:text-gray-500 cursor-pointer" href="/services" data-discover="true">
+      <span class="relative inline-block overflow-hidden "><span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Services</span><span class="absolute top-0 left-0 block w-full transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0">Services</span></span>
+      <svg class="nav-chevron transition-transform duration-200 group-hover/drop:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.5 4.5L6 8L9.5 4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="nav-dropdown-menu">
+      <div class="nav-dropdown-box">
+        <a href="/services" class="block">IT SERVICES</a>
+        <a href="/services" class="block">STAFFING SERVICES</a>
+        <a href="/services" class="block">WORKFORCE SOLUTIONS</a>
+        <a href="/services" class="block">TECHNOLOGY CONSULTING</a>
+      </div>
+    </div>
+  </li>
+  <li class="relative nav-dropdown-parent group/drop">
+    <a class="group py-2.5 inline-flex items-center gap-1.5 uppercase font-normal text-black hover:text-gray-500 cursor-pointer" href="/portfolio" data-discover="true">
+      <span class="relative inline-block overflow-hidden "><span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Industry</span><span class="absolute top-0 left-0 block w-full transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0">Industry</span></span>
+      <svg class="nav-chevron transition-transform duration-200 group-hover/drop:rotate-180" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.5 4.5L6 8L9.5 4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <div class="nav-dropdown-menu">
+      <div class="nav-dropdown-box">
+        <a href="/portfolio" class="block">AUTOMOTIVE</a>
+        <a href="/portfolio" class="block">HEALTHCARE</a>
+        <a href="/portfolio" class="block">E-COMMERCE</a>
+        <a href="/portfolio" class="block">BANKING</a>
+        <a href="/portfolio" class="block">IT SERVICES</a>
+      </div>
+    </div>
+  </li>
+  <li>
+    <a class="group py-2.5 inline-block uppercase font-normal text-black hover:text-gray-500" href="/about" data-discover="true">
+      <span class="relative inline-block overflow-hidden "><span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Careers</span><span class="absolute top-0 left-0 block w-full transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0">Careers</span></span>
+    </a>
+  </li>
+  <li>
+    <a class="group py-2.5 inline-block uppercase font-normal text-black hover:text-gray-500" href="/contact" data-discover="true">
+      <span class="relative inline-block overflow-hidden "><span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">Contact</span><span class="absolute top-0 left-0 block w-full transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0">Contact</span></span>
+    </a>
+  </li>
+</ul></div><div class="flex gap-3 lg:gap-5 items-center"><a class="group px-5 lg:px-6 py-2.5 lg:py-3 hidden sm:inline-flex items-center justify-center bg-black text-xs lg:text-sm font-medium -tracking-[0.2px] leading-5 text-white rounded-full hover:bg-gray-800 transition-all duration-300" href="/contact" data-discover="true"><span class="relative inline-block overflow-hidden "><span class="block transition-transform duration-300 ease-in-out group-hover:-translate-y-full">GET STARTED</span><span class="absolute top-0 left-0 block w-full transition-transform duration-300 ease-in-out translate-y-full group-hover:translate-y-0">GET STARTED</span></span></a><div class="block lg:hidden"><button class="text-black font-medium text-sm uppercase hover:text-gray-500 transition">Menu</button></div></div></div></div></nav></header>
       <main class="min-h-[60vh] flex flex-col items-center justify-center text-center px-6 py-20">
         <h1 class="text-7xl lg:text-9xl font-bold text-black mb-4">404</h1>
         <h2 class="text-2xl lg:text-3xl font-medium text-gray-800 mb-4">Page Not Found</h2>
         <p class="text-gray-600 max-w-md mb-8">The page you were looking for could not be found. It may have been moved or removed.</p>
         <a href="/" class="px-8 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition">Return to Homepage</a>
       </main>
-      <footer class="bg-black py-8 text-center text-white/60 text-sm">
-        <p>© 2026 Velovox. All rights reserved.</p>
-      </footer>
+      <footer class="site-clean-footer"><div class="footer-container"><div class="footer-content-row"><div class="lg:w-80 flex-shrink-0"><a href="/" data-discover="true" class="footer-brand-title"><img alt="Velovox Logo" src="/images/layout/logo-white.svg" class="h-7 w-auto"></a><p class="footer-brand-desc">Next-generation IT services, custom software engineering, and specialized technical staffing solutions.</p><a href="mailto:contact@velovox.com" class="footer-brand-email">contact@velovox.com</a></div><div class="footer-nav-cols"><div><h4 class="footer-col-header">Services</h4><ul class="footer-col-links"><li><a href="/services">IT Services</a></li><li><a href="/services">Staffing Services</a></li><li><a href="/services">Workforce Solutions</a></li><li><a href="/services">Technology Consulting</a></li></ul></div><div><h4 class="footer-col-header">Industries</h4><ul class="footer-col-links"><li><a href="/portfolio">Automotive</a></li><li><a href="/portfolio">Healthcare</a></li><li><a href="/portfolio">E-Commerce</a></li><li><a href="/portfolio">Banking &amp; FinTech</a></li><li><a href="/portfolio">IT Services</a></li></ul></div><div><h4 class="footer-col-header">Company</h4><ul class="footer-col-links"><li><a href="/about">About Us</a></li><li><a href="/about">Careers</a></li><li><a href="/portfolio">Work &amp; Case Studies</a></li><li><a href="/blogs">Insights &amp; Blog</a></li><li><a href="/contact">Contact</a></li></ul></div><div><h4 class="footer-col-header">Legal</h4><ul class="footer-col-links"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Security</a></li><li><a href="#">Cookies</a></li></ul></div></div></div><div class="footer-bottom-bar"><p>&copy; 2026 Velovox. All rights reserved.</p><div class="flex items-center gap-6"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div></div></footer>
     </div>
-  </body>
+  
+
+</body>
 </html>
