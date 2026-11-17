@@ -396,12 +396,12 @@ header nav .nav-menu-list {
 header nav ul.nav-menu-list > li > a {
   display: inline-flex !important;
   align-items: center !important;
-  font-size: 0.8125rem !important; /* 13px */
+  font-size: 0.875rem !important; /* 14px */
   font-weight: 500 !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
   color: #111827 !important;
-  padding: 8px 0 !important;
+  padding: 10px 0 !important;
   white-space: nowrap !important;
   transition: color 0.2s ease !important;
 }
