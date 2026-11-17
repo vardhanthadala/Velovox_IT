@@ -1249,3 +1249,68 @@ html.js-animations-active [data-anim].is-animated {
   padding: 0.25rem 0.6rem;
   border-radius: 0.375rem;
 }
+
+
+
+/* ========================================================
+   COMPACT ELEGANT HEADER 'GET STARTED' BUTTON
+   ======================================================== */
+header a[href*="contact"].rounded-full {
+  padding: 0.5rem 1.15rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  line-height: 1.2 !important;
+  background-color: #7C3AED !important;
+  color: #FFFFFF !important;
+  border-color: #7C3AED !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25) !important;
+}
+
+@media (min-width: 1024px) {
+  header a[href*="contact"].rounded-full {
+    padding: 0.55rem 1.25rem !important;
+    font-size: 0.8125rem !important;
+  }
+}
+
+header a[href*="contact"].rounded-full:hover {
+  background-color: #6D28D9 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35) !important;
+}
+
+
+
+/* ========================================================
+   BALANCED MEDIUM HEADER 'GET STARTED' BUTTON
+   ======================================================== */
+header a[href*="contact"].rounded-full {
+  padding: 0.6875rem 1.5rem !important; /* ~11px top/bottom, 24px left/right */
+  font-size: 0.8125rem !important;      /* 13px */
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  line-height: 1.25 !important;
+  background-color: #7C3AED !important;
+  color: #FFFFFF !important;
+  border-color: #7C3AED !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.28) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (min-width: 1024px) {
+  header a[href*="contact"].rounded-full {
+    padding: 0.75rem 1.625rem !important; /* ~12px top/bottom, 26px left/right */
+    font-size: 0.875rem !important;       /* 14px */
+  }
+}
+
+header a[href*="contact"].rounded-full:hover {
+  background-color: #6D28D9 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.38) !important;
+}
