@@ -721,28 +721,7 @@ article:hover svg {
   margin-top: auto !important;
 }
 
-/* Navbar GET STARTED Button brand violet styling (strictly targeting the CTA button, never nav links) */
-header nav ~ div a.rounded-full,
-header a.rounded-full.bg-black[href*="contact"],
-header .flex.items-center.gap-4 a.rounded-full {
-  background-color: #7C3AED !important;
-  color: #FFFFFF !important;
-  border-color: #7C3AED !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-header nav a {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
-header nav ~ div a.rounded-full:hover,
-header a.rounded-full.bg-black[href*="contact"]:hover,
-header .flex.items-center.gap-4 a.rounded-full:hover {
-  background-color: #6D28D9 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3) !important;
-}
+/* Cleaned legacy header violet button */
 
 
 /* ==========================================================================
@@ -828,12 +807,13 @@ header .flex.items-center.gap-4 a.rounded-full:hover {
   }
 }
 
-/* Row Hover State */
+/* Row Hover State: Clean, high-end editorial studio styling */
 .studio-ind-row:hover {
-  background-color: #FAF5FF; /* Soft violet wash */
+  background-color: #F8F9FA; /* Clean, subtle neutral studio wash */
   padding-left: 28px;
   padding-right: 28px;
-  border-color: #E9D5FF;
+  border-color: #E5E7EB; /* Keep faint subtle separator - no harsh underline */
+  border-radius: 14px;
 }
 
 /* Left Group: Index + Title */
@@ -854,7 +834,7 @@ header .flex.items-center.gap-4 a.rounded-full:hover {
 }
 
 .studio-ind-row:hover .studio-ind-num {
-  color: #7C3AED;
+  color: #111827;
 }
 
 .studio-ind-name {
@@ -873,8 +853,8 @@ header .flex.items-center.gap-4 a.rounded-full:hover {
 }
 
 .studio-ind-row:hover .studio-ind-name {
-  color: #7C3AED;
-  transform: translateX(4px);
+  color: #000000;
+  transform: translateX(6px);
 }
 
 /* Middle / Right Group: Description + Tags */
@@ -903,7 +883,7 @@ header .flex.items-center.gap-4 a.rounded-full:hover {
 }
 
 .studio-ind-row:hover .studio-ind-text {
-  color: #374151;
+  color: #1F2937;
 }
 
 .studio-ind-tags {
@@ -923,8 +903,8 @@ header .flex.items-center.gap-4 a.rounded-full:hover {
 }
 
 .studio-ind-row:hover .studio-ind-tag {
-  background: #EDE9FE;
-  color: #6D28D9;
+  background: #E5E7EB;
+  color: #111827;
 }
 
 /* Floating Thumbnail Image Preview */
@@ -953,7 +933,7 @@ header .flex.items-center.gap-4 a.rounded-full:hover {
   .studio-ind-row:hover .studio-ind-image-preview {
     opacity: 1;
     transform: scale(1.04);
-    box-shadow: 0 16px 30px -10px rgba(124, 58, 237, 0.25);
+    box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -986,8 +966,8 @@ header .flex.items-center.gap-4 a.rounded-full:hover {
 }
 
 .studio-ind-row:hover .studio-ind-arrow {
-  background: #7C3AED;
-  border-color: #7C3AED;
+  background: #111827;
+  border-color: #111827;
   color: #FFFFFF;
   transform: translateX(4px);
 }
@@ -2084,113 +2064,3 @@ header .flex.items-center.gap-4 a.rounded-full:hover {
 
 
 
-/* ========================================================
-   COMPACT ELEGANT HEADER 'GET STARTED' BUTTON
-   ======================================================== */
-header a[href*="contact"].rounded-full {
-  padding: 0.5rem 1.15rem !important;
-  font-size: 0.75rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.05em !important;
-  line-height: 1.2 !important;
-  background-color: #7C3AED !important;
-  color: #FFFFFF !important;
-  border-color: #7C3AED !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25) !important;
-}
-
-@media (min-width: 1024px) {
-  header a[href*="contact"].rounded-full {
-    padding: 0.55rem 1.25rem !important;
-    font-size: 0.8125rem !important;
-  }
-}
-
-header a[href*="contact"].rounded-full:hover {
-  background-color: #6D28D9 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35) !important;
-}
-
-
-
-/* ========================================================
-   BALANCED MEDIUM HEADER 'GET STARTED' BUTTON
-   ======================================================== */
-header a[href*="contact"].rounded-full {
-  padding: 0.6875rem 1.5rem !important; /* ~11px top/bottom, 24px left/right */
-  font-size: 0.8125rem !important;      /* 13px */
-  font-weight: 600 !important;
-  letter-spacing: 0.04em !important;
-  line-height: 1.25 !important;
-  background-color: #7C3AED !important;
-  color: #FFFFFF !important;
-  border-color: #7C3AED !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.28) !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-@media (min-width: 1024px) {
-  header a[href*="contact"].rounded-full {
-    padding: 0.75rem 1.625rem !important; /* ~12px top/bottom, 26px left/right */
-    font-size: 0.875rem !important;       /* 14px */
-  }
-}
-
-header a[href*="contact"].rounded-full:hover {
-  background-color: #6D28D9 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.38) !important;
-}
-
-
-
-/* ========================================================
-   FLAT SOLID VIOLET 'GET STARTED' BUTTON (NO GRADIENT / NO GLOW)
-   ======================================================== */
-header a[href*="contact"].rounded-full,
-header a.rounded-full.bg-black[href*="contact"],
-header nav ~ div a.rounded-full {
-  background-image: none !important;
-  background: #7C3AED !important;
-  background-color: #7C3AED !important;
-  color: #FFFFFF !important;
-  border: 1px solid #7C3AED !important;
-  border-color: #7C3AED !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-  filter: none !important;
-  padding: 0.6875rem 1.5rem !important;
-  font-size: 0.8125rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.04em !important;
-  line-height: 1.25 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: background-color 0.2s ease, border-color 0.2s ease !important;
-}
-
-@media (min-width: 1024px) {
-  header a[href*="contact"].rounded-full,
-  header a.rounded-full.bg-black[href*="contact"],
-  header nav ~ div a.rounded-full {
-    padding: 0.75rem 1.625rem !important;
-    font-size: 0.875rem !important;
-  }
-}
-
-header a[href*="contact"].rounded-full:hover,
-header a.rounded-full.bg-black[href*="contact"]:hover,
-header nav ~ div a.rounded-full:hover {
-  background-image: none !important;
-  background: #6D28D9 !important;
-  background-color: #6D28D9 !important;
-  border-color: #6D28D9 !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
