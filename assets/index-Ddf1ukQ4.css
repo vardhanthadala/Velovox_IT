@@ -1582,7 +1582,7 @@ article:hover svg {
 
 
 /* ========================================================
-   MODERN LIGHT SECTOR DOMAIN SWITCHER (VELOVOX THEME)
+   MODERN LIGHT SECTOR DOMAIN SWITCHER (RISHIR INFOTECH THEME)
    ======================================================== */
 .domain-switcher-white-wrap {
   position: relative;
@@ -1996,17 +1996,17 @@ article:hover svg {
 
 
 /* =========================================================================
-   VELOVOX CLIENT REVIEWS SECTION — 1:1 Pixel Match with Editorial Grid
+   RISHIR INFOTECH CLIENT REVIEWS SECTION — 1:1 Pixel Match with Editorial Grid
    ========================================================================= */
 
-.velovox-reviews-section {
+.rishir-reviews-section {
   padding: 80px 0 100px;
   background: #ffffff;
   position: relative;
 }
 
 /* Header */
-.velovox-reviews-header {
+.rishir-reviews-header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -2014,7 +2014,7 @@ article:hover svg {
   margin-bottom: 0;
 }
 
-.velovox-reviews-kicker {
+.rishir-reviews-kicker {
   display: block;
   font-size: 0.6875rem;
   font-weight: 500;
@@ -2024,7 +2024,7 @@ article:hover svg {
   margin-bottom: 12px;
 }
 
-.velovox-reviews-title {
+.rishir-reviews-title {
   font-size: clamp(2.25rem, 4.2vw, 3.25rem);
   font-weight: 400;
   color: #0b0f19;
@@ -2033,12 +2033,12 @@ article:hover svg {
   margin: 0;
 }
 
-.velovox-reviews-title .italic {
+.rishir-reviews-title .italic {
   font-style: normal !important;
   color: #7c3aed;
 }
 
-.velovox-reviews-badge {
+.rishir-reviews-badge {
   font-size: 0.75rem;
   color: #9ca3af;
   letter-spacing: 0.02em;
@@ -2048,7 +2048,7 @@ article:hover svg {
 }
 
 /* Hairline Grid */
-.velovox-reviews-grid {
+.rishir-reviews-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
@@ -2057,19 +2057,19 @@ article:hover svg {
 }
 
 @media (max-width: 991px) {
-  .velovox-reviews-grid {
+  .rishir-reviews-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  .velovox-reviews-grid {
+  .rishir-reviews-grid {
     grid-template-columns: 1fr;
   }
 }
 
 /* Review Card / Cell */
-.velovox-review-card {
+.rishir-review-card {
   background: #ffffff;
   padding: 44px 40px 40px;
   display: flex;
@@ -2080,19 +2080,19 @@ article:hover svg {
   transition: background-color 0.2s ease;
 }
 
-.velovox-review-card:hover {
+.rishir-review-card:hover {
   background-color: #fafbfc;
 }
 
 /* Card Top: Logo */
-.velovox-review-top {
+.rishir-review-top {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
   height: 28px;
 }
 
-.velovox-review-logo {
+.rishir-review-logo {
   height: 22px;
   width: auto;
   max-width: 105px;
@@ -2102,13 +2102,13 @@ article:hover svg {
   transition: opacity 0.25s ease, filter 0.25s ease;
 }
 
-.velovox-review-card:hover .velovox-review-logo {
+.rishir-review-card:hover .rishir-review-logo {
   opacity: 0.85;
   filter: grayscale(0%);
 }
 
 /* Card Quote Text */
-.velovox-review-text {
+.rishir-review-text {
   font-size: 0.9375rem;
   line-height: 1.68;
   color: #374151;
@@ -2119,7 +2119,7 @@ article:hover svg {
 }
 
 /* Card Author */
-.velovox-review-author {
+.rishir-review-author {
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -2128,14 +2128,14 @@ article:hover svg {
   margin-top: auto;
 }
 
-.velovox-review-name {
+.rishir-review-name {
   font-size: 0.875rem;
   font-weight: 600;
   color: #111827;
   letter-spacing: -0.01em;
 }
 
-.velovox-review-role {
+.rishir-review-role {
   font-size: 0.75rem;
   color: #9ca3af;
   font-weight: 400;
@@ -2143,7 +2143,7 @@ article:hover svg {
 }
 
 /* Stat Cell (Dark Anchor) */
-.velovox-review-card--stat {
+.rishir-review-card--stat {
   background: #0f141e !important;
   color: #ffffff;
   display: flex;
@@ -2155,11 +2155,11 @@ article:hover svg {
   transition: background-color 0.2s ease;
 }
 
-.velovox-review-card--stat:hover {
+.rishir-review-card--stat:hover {
   background: #171e2c !important;
 }
 
-.velovox-stat-big {
+.rishir-stat-big {
   font-size: 4.75rem;
   font-weight: 300;
   color: #ffffff;
@@ -2168,7 +2168,7 @@ article:hover svg {
   margin: 0 0 16px;
 }
 
-.velovox-stat-label {
+.rishir-stat-label {
   font-size: 0.8125rem;
   color: #9ca3af;
   margin: 0;

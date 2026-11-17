@@ -841,7 +841,7 @@ html.js-animations-active [data-anim].is-animated {
 
 
 /* ========================================================
-   MODERN LIGHT SECTOR DOMAIN SWITCHER (VELOVOX THEME)
+   MODERN LIGHT SECTOR DOMAIN SWITCHER (RISHIR INFOTECH THEME)
    ======================================================== */
 .domain-switcher-white-wrap {
   position: relative;
@@ -1253,7 +1253,7 @@ html.js-animations-active [data-anim].is-animated {
 /* ==========================================================================
    NAVBAR 'GET STARTED' CTA - USER EXACT #000000 INSET FLOOD EFFECT
    ========================================================================== */
-.velovox-nav-cta,
+.rishir-nav-cta,
 header a[href*="contact"].rounded-full,
 header a.rounded-full.bg-black[href*="contact"],
 header nav ~ div a.rounded-full {
@@ -1285,7 +1285,7 @@ header nav ~ div a.rounded-full {
 }
 
 @media (min-width: 1024px) {
-  .velovox-nav-cta,
+  .rishir-nav-cta,
   header a[href*="contact"].rounded-full,
   header a.rounded-full.bg-black[href*="contact"],
   header nav ~ div a.rounded-full {
@@ -1296,8 +1296,8 @@ header nav ~ div a.rounded-full {
 }
 
 /* Ensure text & content sit above the inset expansion */
-.velovox-nav-cta .velovox-cta-text,
-.velovox-nav-cta span,
+.rishir-nav-cta .rishir-cta-text,
+.rishir-nav-cta span,
 header a[href*="contact"].rounded-full span {
   position: relative !important;
   z-index: 2 !important;
@@ -1308,8 +1308,8 @@ header a[href*="contact"].rounded-full span {
 }
 
 /* Arrow icon */
-.velovox-nav-cta .velovox-cta-arrow,
-header a[href*="contact"].rounded-full .velovox-cta-arrow {
+.rishir-nav-cta .rishir-cta-arrow,
+header a[href*="contact"].rounded-full .rishir-cta-arrow {
   position: relative !important;
   z-index: 2 !important;
   display: inline-block !important;
@@ -1321,7 +1321,7 @@ header a[href*="contact"].rounded-full .velovox-cta-arrow {
 }
 
 /* The expanding circle pseudo element */
-.velovox-nav-cta::before,
+.rishir-nav-cta::before,
 header a[href*="contact"].rounded-full::before,
 header a.rounded-full.bg-black[href*="contact"]::before,
 header nav ~ div a.rounded-full::before {
@@ -1344,7 +1344,7 @@ header nav ~ div a.rounded-full::before {
 }
 
 /* Strip extra pseudo-elements */
-.velovox-nav-cta::after,
+.rishir-nav-cta::after,
 header a[href*="contact"].rounded-full::after,
 header a.rounded-full.bg-black[href*="contact"]::after,
 header nav ~ div a.rounded-full::after {
@@ -1353,7 +1353,7 @@ header nav ~ div a.rounded-full::after {
 }
 
 /* ON HOVER: Inset flood in #000000 and text to white - ZERO VIOLET */
-.velovox-nav-cta:hover,
+.rishir-nav-cta:hover,
 header a[href*="contact"].rounded-full:hover,
 header a.rounded-full.bg-black[href*="contact"]:hover,
 header nav ~ div a.rounded-full:hover {
@@ -1364,27 +1364,27 @@ header nav ~ div a.rounded-full:hover {
   box-shadow: none !important;
 }
 
-.velovox-nav-cta:hover::before,
+.rishir-nav-cta:hover::before,
 header a[href*="contact"].rounded-full:hover::before,
 header a.rounded-full.bg-black[href*="contact"]:hover::before,
 header nav ~ div a.rounded-full:hover::before {
   box-shadow: inset 0 0 0 10em #000000 !important;
 }
 
-.velovox-nav-cta:hover .velovox-cta-text,
-.velovox-nav-cta:hover span,
+.rishir-nav-cta:hover .rishir-cta-text,
+.rishir-nav-cta:hover span,
 header a[href*="contact"].rounded-full:hover span {
   color: #fff !important;
 }
 
-.velovox-nav-cta:hover .velovox-cta-arrow,
-header a[href*="contact"].rounded-full:hover .velovox-cta-arrow {
+.rishir-nav-cta:hover .rishir-cta-arrow,
+header a[href*="contact"].rounded-full:hover .rishir-cta-arrow {
   color: #fff !important;
   transform: translateX(3px) !important;
 }
 
 /* ACTIVE TACTILE PRESS */
-.velovox-nav-cta:active,
+.rishir-nav-cta:active,
 header a[href*="contact"].rounded-full:active,
 header a.rounded-full.bg-black[href*="contact"]:active,
 header nav ~ div a.rounded-full:active {
@@ -1392,7 +1392,7 @@ header nav ~ div a.rounded-full:active {
 }
 
 /* ACCESSIBILITY FOCUS */
-.velovox-nav-cta:focus-visible,
+.rishir-nav-cta:focus-visible,
 header a[href*="contact"].rounded-full:focus-visible {
   outline: 2px solid #000000 !important;
   outline-offset: 2px !important;

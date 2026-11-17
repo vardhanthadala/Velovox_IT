@@ -1,4 +1,4 @@
-# Velovox — IT Services & Technical Staffing
+# Rishir Infotech — IT Services & Technical Staffing
 
 A modern, high-performance IT Services and Technical Staffing website built with an editorial monochrome aesthetic, fluid responsive layouts, and self-contained static assets.
 
@@ -31,7 +31,7 @@ A modern, high-performance IT Services and Technical Staffing website built with
 │   ├── blog/
 │   ├── clients/
 │   ├── cover/
-│   ├── layout/         # Custom Velovox SVG logos (black & white)
+│   ├── layout/         # Custom Rishir Infotech SVG logos (black & white)
 │   ├── project/
 │   ├── services/
 │   └── team/
