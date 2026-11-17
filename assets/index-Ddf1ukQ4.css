@@ -648,78 +648,7 @@ article:hover svg {
   transform: translateY(-2px) scale(1.05) !important;
 }
 
-/* Testimonial cards uniform height & flex layout */
-.testimonial-swiper .swiper-wrapper {
-  display: flex !important;
-  align-items: stretch !important;
-}
 
-.testimonial-swiper .swiper-slide {
-  height: auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-.testimonial-swiper .swiper-slide > div {
-  height: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  box-sizing: border-box !important;
-}
-
-.testimonial-swiper .swiper-slide p.mb-8 {
-  flex-grow: 1 !important;
-  margin-bottom: 2rem !important;
-}
-
-/* Testimonial client logos styling */
-.testimonial-swiper .swiper-slide img {
-  height: 28px !important;
-  width: auto !important;
-  max-width: 140px !important;
-  object-fit: contain !important;
-  display: block !important;
-  margin-bottom: 1.5rem !important;
-  opacity: 0.65 !important;
-  filter: grayscale(100%) !important;
-  transition: opacity 0.3s ease, filter 0.3s ease !important;
-}
-
-.testimonial-swiper .swiper-slide:hover img {
-  opacity: 1 !important;
-  filter: grayscale(0%) !important;
-}
-
-/* Ensure Swiper slide content fills 100% height and matches identically across all viewport sizes */
-.testimonial-swiper .swiper-wrapper {
-  display: flex !important;
-  align-items: stretch !important;
-}
-
-.testimonial-swiper .swiper-slide {
-  height: auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-.testimonial-swiper .swiper-slide > div,
-.testimonial-swiper .swiper-slide > div.rounded-\[20px\] {
-  height: 100% !important;
-  min-height: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  box-sizing: border-box !important;
-}
-
-.testimonial-swiper .swiper-slide p.mb-8 {
-  flex: 1 1 auto !important;
-}
-
-.testimonial-swiper .swiper-slide > div > div:last-child {
-  margin-top: auto !important;
-}
 
 /* Cleaned legacy header violet button */
 
@@ -2063,4 +1992,187 @@ article:hover svg {
 }
 
 
+
+
+
+/* =========================================================================
+   VELOVOX CLIENT REVIEWS SECTION — 1:1 Pixel Match with Editorial Grid
+   ========================================================================= */
+
+.velovox-reviews-section {
+  padding: 80px 0 100px;
+  background: #ffffff;
+  position: relative;
+}
+
+/* Header */
+.velovox-reviews-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  margin-bottom: 0;
+}
+
+.velovox-reviews-kicker {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.velovox-reviews-title {
+  font-size: clamp(2.25rem, 4.2vw, 3.25rem);
+  font-weight: 400;
+  color: #0b0f19;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.velovox-reviews-title .italic {
+  font-style: normal !important;
+  color: #7c3aed;
+}
+
+.velovox-reviews-badge {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  padding-bottom: 8px;
+  font-weight: 400;
+}
+
+/* Hairline Grid */
+.velovox-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: #f0f1f3;
+  border: 1px solid #f0f1f3;
+}
+
+@media (max-width: 991px) {
+  .velovox-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .velovox-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Review Card / Cell */
+.velovox-review-card {
+  background: #ffffff;
+  padding: 44px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 330px;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.velovox-review-card:hover {
+  background-color: #fafbfc;
+}
+
+/* Card Top: Logo */
+.velovox-review-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 28px;
+}
+
+.velovox-review-logo {
+  height: 22px;
+  width: auto;
+  max-width: 105px;
+  object-fit: contain;
+  opacity: 0.45;
+  filter: grayscale(100%);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.velovox-review-card:hover .velovox-review-logo {
+  opacity: 0.85;
+  filter: grayscale(0%);
+}
+
+/* Card Quote Text */
+.velovox-review-text {
+  font-size: 0.9375rem;
+  line-height: 1.68;
+  color: #374151;
+  font-weight: 400;
+  margin: 0 0 32px;
+  flex: 1 1 auto;
+  letter-spacing: -0.01em;
+}
+
+/* Card Author */
+.velovox-review-author {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 20px;
+  border-top: none;
+  margin-top: auto;
+}
+
+.velovox-review-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: -0.01em;
+}
+
+.velovox-review-role {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+/* Stat Cell (Dark Anchor) */
+.velovox-review-card--stat {
+  background: #0f141e !important;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 44px 40px;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.velovox-review-card--stat:hover {
+  background: #171e2c !important;
+}
+
+.velovox-stat-big {
+  font-size: 4.75rem;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin: 0 0 16px;
+}
+
+.velovox-stat-label {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.45;
+  max-width: 200px;
+}
 
