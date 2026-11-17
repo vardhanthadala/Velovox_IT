@@ -137,40 +137,48 @@
     // Process all headings
     document.querySelectorAll('.title-animation').forEach(setupSplitHeading);
 
-    // Observer setup: Trigger when 12% into viewport from bottom
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
+    // Intersection Observer setup
+    if (!window.__siteAnimObserver) {
+      window.__siteAnimObserver = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
 
-            const delay = el.getAttribute('data-anim-delay');
-            if (delay) el.style.transitionDelay = `${delay}ms`;
+              const delay = el.getAttribute('data-anim-delay');
+              if (delay) el.style.transitionDelay = `${delay}ms`;
 
-            const duration = el.getAttribute('data-anim-duration');
-            if (duration) el.style.transitionDuration = `${duration}ms`;
+              const duration = el.getAttribute('data-anim-duration');
+              if (duration) el.style.transitionDuration = `${duration}ms`;
 
-            el.classList.add('is-animated');
+              // Trigger transition
+              requestAnimationFrame(() => {
+                el.classList.add('is-animated');
+              });
 
-            // Counter trigger
-            if (el.hasAttribute('data-count')) {
-              runCounter(el);
+              // Counter trigger
+              if (el.hasAttribute('data-count')) {
+                runCounter(el);
+              }
+              el.querySelectorAll('[data-count]').forEach(runCounter);
+
+              if (!el.hasAttribute('data-anim-repeat')) {
+                obs.unobserve(el);
+              }
+            } else if (entry.target.hasAttribute('data-anim-repeat')) {
+              entry.target.classList.remove('is-animated');
             }
-            el.querySelectorAll('[data-count]').forEach(runCounter);
-
-            if (!el.hasAttribute('data-anim-repeat')) {
-              obs.unobserve(el);
-            }
-          } else if (entry.target.hasAttribute('data-anim-repeat')) {
-            entry.target.classList.remove('is-animated');
-          }
-        });
-      },
-      { root: null, rootMargin: '0px 0px -12% 0px', threshold: 0.1 }
-    );
+          });
+        },
+        { root: null, rootMargin: '0px 0px -2% 0px', threshold: 0.01 }
+      );
+    }
 
     document.querySelectorAll('.title-animation, [data-anim], [data-count], .split-lines-reveal').forEach((el) => {
-      observer.observe(el);
+      if (!el.dataset.animObserved) {
+        el.dataset.animObserved = 'true';
+        window.__siteAnimObserver.observe(el);
+      }
     });
   }
 
