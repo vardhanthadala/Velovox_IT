@@ -165,12 +165,13 @@
               if (!el.hasAttribute('data-anim-repeat')) {
                 obs.unobserve(el);
               }
-            } else if (entry.target.hasAttribute('data-anim-repeat')) {
-              entry.target.classList.remove('is-animated');
+            } else {
+              // Lazy-load entrance animation on scroll (replay when scrolling into view)
+              el.classList.remove('is-animated');
             }
           });
         },
-        { root: null, rootMargin: '0px 0px -2% 0px', threshold: 0.01 }
+        { root: null, rootMargin: '50px 0px -5% 0px', threshold: 0.05 }
       );
     }
 
@@ -178,6 +179,13 @@
       if (!el.dataset.animObserved) {
         el.dataset.animObserved = 'true';
         window.__siteAnimObserver.observe(el);
+      }
+      // If element is already in the viewport upon page load, immediately mark active
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        requestAnimationFrame(() => {
+          el.classList.add('is-animated');
+        });
       }
     });
   }

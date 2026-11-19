@@ -16,7 +16,8 @@ html.js-animations-active [data-anim] {
   opacity: 0;
   will-change: transform, opacity;
   transition-property: transform, opacity;
-  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 0.95s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ==========================================================================
@@ -41,8 +42,8 @@ html.js-animations-active [data-anim] {
 }
 
 /* Variant A: Centered Headings (Dynamic 3D kinetic upward tilt) */
-html.js-animations-active .title-animation[data-variant="A"] .anim-char,
-html.js-animations-active .title-animation:not([data-variant="B"]) .anim-char {
+html.js-animations-active .title-animation[data-variant="A"]:not(.is-animated) .anim-char,
+html.js-animations-active .title-animation:not([data-variant="B"]):not(.is-animated) .anim-char {
   opacity: 0;
   transform: translateY(90%) rotateX(-45deg);
 }
@@ -54,7 +55,7 @@ html.js-animations-active .title-animation:not([data-variant="B"]).is-animated .
 }
 
 /* Variant B: Left-aligned Headings (Sleek horizontal reveal with depth tilt) */
-html.js-animations-active .title-animation[data-variant="B"] .anim-char {
+html.js-animations-active .title-animation[data-variant="B"]:not(.is-animated) .anim-char {
   opacity: 0;
   transform: translateX(40px) rotateY(-20deg);
 }
@@ -91,22 +92,22 @@ html.js-animations-active .split-lines-reveal.is-animated .anim-line-inner {
 
 /* Fade-Up: Smooth vertical rise + scale micro-depth */
 html.js-animations-active [data-anim="fade-up"] {
-  transform: translateY(45px) scale(0.97);
+  transform: translateY(32px);
 }
 
 /* Fade-Down: Drop from top + scale micro-depth */
 html.js-animations-active [data-anim="fade-down"] {
-  transform: translateY(-45px) scale(0.97);
+  transform: translateY(-32px);
 }
 
 /* Slide-Left: Block slide from left */
 html.js-animations-active [data-anim="slide-left"] {
-  transform: translateX(-80px);
+  transform: translateX(-48px);
 }
 
 /* Slide-Right: Block slide from right */
 html.js-animations-active [data-anim="slide-right"] {
-  transform: translateX(80px);
+  transform: translateX(48px);
 }
 
 /* Active State */
