@@ -128,7 +128,7 @@
   gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 901px) {
   .home-builders-gallery {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
@@ -2786,3 +2786,721 @@
   background: #D2042D;
 }
 
+
+
+/* ==========================================================================
+   Careers Culture & Perks Grid
+   ========================================================================== */
+.careers-perks-section {
+  padding: 4.5rem 0 5rem 0;
+  background-color: #FAFAFB;
+  border-top: 1px solid #ECECEE;
+  border-bottom: 1px solid #ECECEE;
+}
+
+.careers-perks-header {
+  margin-bottom: 3.5rem;
+  max-width: 680px;
+}
+
+.careers-perks-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #D2042D;
+  margin-bottom: 0.85rem;
+}
+
+.careers-perks-title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  color: #0A0A0A;
+  margin-bottom: 0.75rem;
+  line-height: 1.15;
+}
+
+.careers-perks-title em {
+  font-style: italic;
+  font-family: inherit;
+  color: #D2042D;
+}
+
+.careers-perks-lead {
+  font-size: 1.0625rem;
+  color: #52525B;
+  line-height: 1.6;
+}
+
+.careers-perks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .careers-perks-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+.careers-perk-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.careers-perk-card:hover {
+  border-color: #D4D4D8;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.08);
+}
+
+.careers-perk-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.625rem;
+  background: #F4F4F5;
+  border: 1px solid #E4E4E7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D2042D;
+  margin-bottom: 1.5rem;
+}
+
+.careers-perk-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.careers-perk-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0A0A0A;
+  margin: 0 0 0.6rem 0;
+  letter-spacing: -0.02em;
+}
+
+.careers-perk-desc {
+  font-size: 0.9375rem;
+  color: #52525B;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* ==========================================================================
+   Careers Editorial Feature Rows (Why Choose Us & Advancement Opportunities)
+   ========================================================================== */
+
+/* ==========================================================================
+   Careers Section 1 & 2 - Rishir Design System Alignment
+   Aligns with About / Services editorial layout, kickers, typography & cards
+   ========================================================================== */
+
+.careers-brand-section {
+  padding: 5.5rem 0;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.careers-brand-section--alt {
+  background-color: #FBFBFB;
+  border-top: 1px solid #F3F4F6;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.careers-brand-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.careers-brand-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+.careers-brand-grid--reverse {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+/* Kicker */
+.careers-brand-kicker {
+  font-family: var(--font-mono, "SF Mono", Menlo, Consolas, monospace);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #D2042D;
+  margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1;
+}
+
+.careers-brand-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: #D2042D;
+}
+
+/* Headline */
+.careers-brand-h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+  color: #0A0A0A;
+  margin: 0 0 1.5rem 0;
+}
+
+.careers-brand-h2 em {
+  font-style: italic;
+  font-weight: 400;
+  color: #D2042D;
+}
+
+/* Lead & Body Paragraphs */
+.careers-brand-lead {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #1F2937;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+
+.careers-brand-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4B5563;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Value Highlights / Feature Badges */
+.careers-brand-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.careers-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.careers-point-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: #D2042D;
+  margin-top: 2px;
+}
+
+.careers-point-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.careers-point-sub {
+  font-size: 0.8125rem;
+  color: #6B7280;
+  line-height: 1.45;
+}
+
+/* Media Card & Frame */
+.careers-brand-media {
+  position: relative;
+  width: 100%;
+}
+
+.careers-brand-frame {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  background-color: #F3F4F6;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07);
+  aspect-ratio: 4 / 3.3;
+}
+
+.careers-brand-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.careers-brand-frame:hover img {
+  transform: scale(1.03);
+}
+
+/* Floating Metric Accent Card */
+.careers-brand-accent-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1rem 1.25rem;
+  border-radius: 0.875rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(229, 231, 235, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  max-width: 280px;
+}
+
+.careers-accent-badge-num {
+  font-family: var(--font-mono, monospace);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #D2042D;
+  line-height: 1;
+}
+
+.careers-accent-badge-text {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.35;
+}
+
+/* Hide inline mobile image on desktop */
+.careers-mobile-inline-img {
+  display: none;
+}
+
+/* Tablet & Mobile Layout: Heading -> Image -> Data */
+@media (max-width: 900px) {
+  .careers-brand-grid,
+  .careers-brand-grid--reverse {
+    display: block !important;
+  }
+
+  /* Hide the separate side column image on mobile/tablet */
+  .careers-brand-media {
+    display: none !important;
+  }
+
+  /* Show image directly under the heading */
+  .careers-mobile-inline-img {
+    display: block !important;
+    margin: 1.5rem 0 1.75rem 0 !important;
+  }
+
+  .careers-brand-frame {
+    width: 100% !important;
+    max-height: 320px !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+
+  .careers-brand-h2 {
+    font-size: 2rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .careers-brand-section {
+    padding: 3rem 0 !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .careers-brand-grid,
+  .careers-brand-grid--reverse {
+    gap: 2.5rem;
+  }
+  .careers-brand-frame {
+    max-height: 440px;
+  }
+}
+
+@media (max-width: 640px) {
+  .careers-brand-points {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .careers-brand-h2 {
+    font-size: 1.75rem !important;
+  }
+  .careers-brand-accent-badge {
+    position: static !important;
+    margin-top: 0.75rem !important;
+    max-width: 100% !important;
+  }
+}
+
+
+/* ==========================================================================
+   Mobile Header Fix: Hide "GET STARTED" in top bar on mobile/tablet screens.
+   It is available inside the slide-down MENU drawer.
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .rishir-nav-cta,
+  header .rishir-nav-cta,
+  header a.rishir-nav-cta,
+  header div.flex.items-center > a[href*="contact"].rounded-full,
+  header nav ~ div > a[href*="contact"].rounded-full {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .rishir-nav-cta,
+  header .rishir-nav-cta,
+  header a.rishir-nav-cta {
+    display: inline-flex !important;
+  }
+}
+
+/* Ensure mobile header brand logo doesn't overflow */
+@media (max-width: 640px) {
+  header img[src*="logo-rishir"] {
+    max-height: 26px !important;
+    width: auto !important;
+  }
+}
+
+
+/* ==========================================================================
+   Mobile Hamburger / Close Icon & Mobile Menu GET STARTED Button Fix
+   ========================================================================== */
+
+/* Mobile hamburger button styling */
+.mobile-menu-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  border: 1px solid #E5E7EB !important;
+  color: #111827 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+}
+
+.mobile-menu-btn:hover {
+  background-color: #F3F4F6 !important;
+  border-color: #D1D5DB !important;
+}
+
+.mobile-menu-btn svg {
+  width: 22px !important;
+  height: 22px !important;
+  display: block !important;
+}
+
+/* Full-width black button inside mobile slide-down drawer */
+.mobile-drawer-cta,
+header div.border-t a.mobile-drawer-cta,
+header a.mobile-drawer-cta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 48px !important;
+  padding: 0 24px !important;
+  background-color: #0A0A0A !important;
+  background: #0A0A0A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #0A0A0A !important;
+  border-radius: 9999px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  transition: background-color 0.2s ease, transform 0.15s ease !important;
+}
+
+.mobile-drawer-cta span,
+.mobile-drawer-cta * {
+  color: #FFFFFF !important;
+}
+
+.mobile-drawer-cta:hover {
+  background-color: #262626 !important;
+  background: #262626 !important;
+  color: #FFFFFF !important;
+  border-color: #262626 !important;
+}
+
+.mobile-drawer-cta::before,
+.mobile-drawer-cta::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+/* ==========================================================================
+   Mobile Responsive Fix: Service Detail Hero Specs Grid
+   Fix overflow of '<120ms', '99.99%', and descriptions on mobile screens (320px - 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .service-hero-metrics-bar {
+    grid-template-columns: 1fr !important;
+    gap: 1px !important;
+    border-radius: 12px !important;
+  }
+  .service-metric-item {
+    padding: 1.25rem 1.25rem !important;
+  }
+  .service-metric-index {
+    font-size: 0.6875rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .service-metric-val {
+    font-size: 2.25rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.35rem !important;
+    word-break: break-word !important;
+  }
+  .service-metric-label {
+    font-size: 0.75rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+
+/* ==========================================================================
+   Mobile Responsive Fix: Industry Detail Architecture Blueprint Pill Tabs
+   Fix centered text, text wrapping, and compact padding on mobile (<640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .ind-studio-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    border-bottom: none !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .ind-studio-tab-btn {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 12px !important;
+    font-size: 0.8125rem !important;
+    line-height: 1.35 !important;
+    gap: 0.75rem !important;
+  }
+  .ind-studio-tab-num {
+    font-size: 0.75rem !important;
+    flex-shrink: 0 !important;
+    margin-top: 1px !important;
+  }
+}
+
+
+/* ==========================================================================
+   Mobile Menu Sub-items for Services and Industries
+   ========================================================================== */
+.mobile-menu-sublinks {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.35rem !important;
+  padding-left: 1rem !important;
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.5rem !important;
+  border-left: 2px solid #E5E7EB !important;
+}
+
+.mobile-menu-sublinks a {
+  font-size: 0.8125rem !important;
+  color: #6B7280 !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  padding: 0.25rem 0 !important;
+  transition: color 0.2s ease !important;
+}
+
+.mobile-menu-sublinks a:hover {
+  color: #D2042D !important;
+}
+
+.mobile-menu-heading-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+
+/* ==========================================================================
+   Mobile Responsive Fix: Industry Detail Architecture Blueprint Pill Tabs
+   Fix centered text, text wrapping, and compact padding on mobile (<640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .ind-studio-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    border-bottom: none !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .ind-studio-tab-btn {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: 12px !important;
+    font-size: 0.8125rem !important;
+    line-height: 1.35 !important;
+    gap: 0.75rem !important;
+  }
+  .ind-studio-tab-num {
+    font-size: 0.75rem !important;
+    flex-shrink: 0 !important;
+    margin-top: 1px !important;
+  }
+}
+
+
+/* ==========================================================================
+   Mobile Menu Sub-items for Services and Industries
+   ========================================================================== */
+.mobile-menu-sublinks {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.35rem !important;
+  padding-left: 1rem !important;
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.5rem !important;
+  border-left: 2px solid #E5E7EB !important;
+}
+
+.mobile-menu-sublinks a {
+  font-size: 0.8125rem !important;
+  color: #6B7280 !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  padding: 0.25rem 0 !important;
+  transition: color 0.2s ease !important;
+}
+
+.mobile-menu-sublinks a:hover {
+  color: #D2042D !important;
+}
+
+.mobile-menu-heading-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+
+/* ==========================================================================
+   Home Page "A Team of Builders" Mobile Hierarchy Fix
+   Heading -> Image -> Paragraph -> Stats -> Image 2
+   ========================================================================== */
+
+/* Inline mobile frame hidden on desktop */
+.home-builders-mobile-inline-frame {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .home-builders-section {
+    padding: 3.5rem 0 4rem 0 !important;
+  }
+  .home-builders-top {
+    gap: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .home-builders-title {
+    font-size: 2.25rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Show first image right under the heading */
+  .home-builders-mobile-inline-frame {
+    display: block !important;
+    margin: 1.25rem 0 1.75rem 0 !important;
+    border-radius: 0.85rem !important;
+    overflow: hidden !important;
+    box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.6) !important;
+    aspect-ratio: 16 / 9.5 !important;
+    max-height: 340px !important;
+  }
+  .home-builders-mobile-inline-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 340px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .home-builders-lead {
+    font-size: 1.0625rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 1.75rem !important;
+  }
+  .home-builders-stats {
+    padding-top: 1.5rem !important;
+    gap: 2rem !important;
+  }
+  .home-builders-stat-num {
+    font-size: 2.5rem !important;
+  }
+
+  /* Hide the duplicate first image in the bottom gallery on mobile/tablet */
+  .home-builders-gallery {
+    display: block !important;
+    margin-top: 2.25rem !important;
+  }
+  .home-builders-gallery .home-builders-frame:first-child {
+    display: none !important;
+  }
+
+  /* Second image at bottom of the section */
+  .home-builders-gallery .home-builders-frame:last-child {
+    display: block !important;
+    border-radius: 0.85rem !important;
+    overflow: hidden !important;
+    aspect-ratio: 16 / 9.5 !important;
+    max-height: 340px !important;
+  }
+  .home-builders-gallery .home-builders-frame:last-child img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 340px !important;
+    object-fit: cover !important;
+  }
+}

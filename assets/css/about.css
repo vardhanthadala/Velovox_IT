@@ -192,37 +192,49 @@
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .about-hero-collage {
-    grid-template-columns: 1fr 1.25fr 1fr;
-    gap: 1.5rem;
-    align-items: center;
-  }
-}
-
 .about-hero-photo {
   margin: 0;
   padding: 0;
   border-radius: 1.25rem;
   overflow: hidden;
   background: #F4F4F5;
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
 }
 
 .about-hero-photo img {
   width: 100%;
-  height: 280px;
+  height: 200px;
   object-fit: cover;
   display: block;
   border-radius: 1.25rem;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Hide about hero collage images completely on mobile (320px to 767px) */
+@media (max-width: 767px) {
+  .about-hero-collage {
+    display: none !important;
+  }
+  .about-hero-section {
+    padding-bottom: 3.5rem !important;
+  }
+  .about-hero-text-col {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Desktop (>= 768px): Elegant 3-photo symmetrical collage */
 @media (min-width: 768px) {
+  .about-hero-collage {
+    grid-template-columns: 1fr 1.25fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
   .about-hero-photo img {
     height: 320px;
   }
   .about-hero-photo--center img {
-    height: 380px;
+    height: 390px;
   }
 }
 
@@ -882,4 +894,94 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ==========================================================================
+   Mobile Responsive Fix: About Metrics Grid (Single column on mobile)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .about-metrics-band {
+    padding: 3.5rem 0 !important;
+  }
+  .about-metrics-top {
+    margin-bottom: 2rem !important;
+  }
+  .about-metrics-h2 {
+    font-size: 1.85rem !important;
+  }
+  .about-metrics-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1px !important;
+    border-radius: 1rem !important;
+  }
+  .about-metric-card {
+    padding: 2rem 1.5rem !important;
+    gap: 1rem !important;
+  }
+  .about-metric-num {
+    font-size: 2.75rem !important;
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 0.25rem !important;
+  }
+  .about-metric-num sup {
+    font-size: 1.5rem !important;
+    position: static !important;
+    vertical-align: baseline !important;
+  }
+  .about-metric-desc {
+    font-size: 0.875rem !important;
+    line-height: 1.55 !important;
+  }
+}
+
+
+/* Inline mobile frame hidden on desktop */
+.about-chapter-frame-mobile-inline {
+  display: none;
+}
+
+/* ==========================================================================
+   Mobile Responsive Fix: About Chapter Story & Image Order
+   On mobile/tablet (<= 1023px): Heading/Meta -> Story -> Image -> Link at bottom
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .about-chapter-grid {
+    display: block !important;
+  }
+  .about-chapter-meta {
+    margin-bottom: 1.5rem !important;
+  }
+  .about-chapter-story {
+    margin-bottom: 0 !important;
+  }
+  /* Hide the desktop 3rd column frame on mobile/tablet */
+  .about-chapter-grid > .about-chapter-frame {
+    display: none !important;
+  }
+  /* Display the inline mobile frame ABOVE the link */
+  .about-chapter-frame-mobile-inline {
+    display: block !important;
+    width: 100% !important;
+    border-radius: 1.25rem !important;
+    overflow: hidden !important;
+    background: #F4F4F5 !important;
+    aspect-ratio: 16 / 10 !important;
+    max-height: 300px !important;
+    margin: 1.75rem 0 1.5rem 0 !important;
+    box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.08) !important;
+  }
+  .about-chapter-frame-mobile-inline img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 300px !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 1.25rem !important;
+  }
+  .about-chapter-link {
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+  }
 }
