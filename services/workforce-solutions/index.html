@@ -19,67 +19,104 @@
 </head>
 <body class="antialiased">
     <div id="root">
-        <!-- Static prerender for fast first paint before React mounts -->
         <main>
-            <section class="service-detail-hero">
-                <div class="max-w-7xl mx-auto px-6">
-                    <span class="service-kicker">Strategic Scaling</span>
-                    <h1 class="service-hero-title">Flexible models for <em>growing teams.</em></h1>
-                    <p class="service-hero-desc">End-to-end workforce management, dedicated agile pods, and vendor consolidation designed to streamline operations and optimize engineering expenditure.</p>
-                    <div class="flex items-center gap-4">
-                        <a href="/contact" class="group px-7 py-3.5 inline-flex items-center justify-center bg-black text-sm font-medium leading-5 text-white rounded-full hover:bg-gray-800 transition-all duration-300">
-                            GET STARTED &rarr;
-                        </a>
-                        <a href="/portfolio" class="px-7 py-3.5 inline-flex items-center justify-center bg-white border border-gray-300 text-sm font-medium leading-5 text-black rounded-full hover:bg-gray-50 transition-all duration-300">
-                            VIEW CASE STUDIES
-                        </a>
+            <!-- 1. Clean Text Hero Section -->
+            <section class="service-clean-hero">
+                <div class="max-w-7xl mx-auto px-6 service-hero-inner">
+                    
+                    <div class="service-hero-header-row">
+                        <div data-anim="fade-right" data-anim-delay="100">
+                            <span class="service-kicker" data-anim="fade-down" data-anim-delay="50">Contingent Workforce & Agile Pods</span>
+                            <h1 class="service-hero-title title-animation" data-variant="A">
+                                Flexible models for <em>growing teams.</em>
+                            </h1>
+                        </div>
+                        <div class="service-hero-lead-col" data-anim="fade-left" data-anim-delay="150">
+                            <p class="service-hero-desc" data-anim="fade-up" data-anim-delay="100">End-to-end workforce management, dedicated agile pods, and vendor consolidation designed to streamline operations and optimize engineering expenditure.</p>
+                            </div>
+                    </div>
+                    
+                    <!-- Big Representative Service Image -->
+                    <div class="service-hero-visual-container" data-anim="fade-up" data-anim-delay="180">
+                        <div class="service-hero-visual-frame">
+                            <img src="/images/services/hero-images/workforce-solution.jpg" alt="Global Workforce Delivery and Dedicated Agile Pods" class="service-hero-visual-img" loading="eager" />
+                            
+                            </div>
+                    </div>
+
+                    <!-- Metrics Bar -->
+                    <div class="service-hero-metrics-bar" data-anim="fade-up" data-anim-delay="220">
+                    </div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="80"><span class="service-metric-val">100%</span><span class="service-metric-label">Statutory Compliance & Tax Shield</span></div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="160"><span class="service-metric-val">3 Regions</span><span class="service-metric-label">US, Canada, and India Hubs</span></div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="240"><span class="service-metric-val">Zero</span><span class="service-metric-label">Misclassification Liability</span></div>
                     </div>
                 </div>
             </section>
             
-            <section class="service-capabilities-section">
+            <!-- 2. Interactive Tabbed Showcase (3 Unique Images) -->
+            <section class="service-showcase-section">
                 <div class="max-w-7xl mx-auto px-6">
-                    <div class="service-grid-header">
-                        <h2 class="service-grid-title">Key Capabilities &amp; <em>Impact</em></h2>
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Interactive Capabilities</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            Capabilities &amp; <em>Visual Proof.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            Select a capability below to inspect our production architecture and delivered workflows.
+                        </p>
                     </div>
-                    <div class="service-cards-grid">
-                        
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 01</div>
-        <h3 class="service-card-title">Dedicated Agile Pods</h3>
-        <p class="service-card-desc">Self-contained cross-functional teams including product managers, developers, and QA engineers dedicated to your milestones.</p>
-    </div>
-</div>
+                    <div class="service-showcase-container">
+                        <!-- Left Tabs -->
+                        <div class="service-tabs-column">
+                            <div class="service-tab-button is-active" data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 01</span><span class="service-tab-tag">Agile Pods</span></div><h3 class="service-tab-title">Autonomous Milestone Pods</h3><p class="service-tab-desc">Turnkey cross-functional teams complete with product management, engineering, and QA aligned around product milestones.</p></div><div class="service-tab-button " data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 02</span><span class="service-tab-tag">Operations</span></div><h3 class="service-tab-title">Managed SLA Services</h3><p class="service-tab-desc">Outcome-based engagements governed by clear delivery SLAs, transparent burndown reporting, and milestone accountability.</p></div><div class="service-tab-button " data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 03</span><span class="service-tab-tag">Scale</span></div><h3 class="service-tab-title">Global Talent Cloud & Footprint</h3><p class="service-tab-desc">Unified engineering hubs across North America and India with full legal employer-of-record (EOR) protection.</p></div>
+                        </div>
+                        <!-- Right Active Visual -->
+                        <div class="service-showcase-visual-wrap" data-anim="fade-left" data-anim-delay="120">
+                            <img src="/images/services/workforce-solutions-1.jpg" alt="Autonomous Milestone Pods" class="service-showcase-img" loading="eager">
+                            <div class="service-showcase-overlay"></div>
+                            <div class="service-showcase-caption-bar">
+                                <span class="service-showcase-caption-text">Milestone Delivery & Sprint Velocity Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 02</div>
-        <h3 class="service-card-title">Managed Service Operations</h3>
-        <p class="service-card-desc">Outcome-based SLA project delivery with guaranteed timeline, budget transparency, and accountability.</p>
-    </div>
-</div>
+            <!-- 3. Process Workflow -->
+            <section class="service-workflow-section">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Engagement Model</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            How We <em>Deliver.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            A disciplined, four-phase delivery cycle that eliminates friction and enforces transparency.
+                        </p>
+                    </div>
+                    <div class="service-process-grid">
+                        <div class="service-step-card" data-anim="fade-right" data-anim-delay="100"><span class="service-step-num">01</span><h4 class="service-step-title">Operational Audit</h4><p class="service-step-desc">We analyze contingent workforce spending, vendor sprawl, and project needs.</p></div><div class="service-step-card" data-anim="fade-down" data-anim-delay="200"><span class="service-step-num">02</span><h4 class="service-step-title">Pod Assembly</h4><p class="service-step-desc">We configure a dedicated squad matched to your milestone delivery timeline.</p></div><div class="service-step-card" data-anim="fade-up" data-anim-delay="300"><span class="service-step-num">03</span><h4 class="service-step-title">Governance Setup</h4><p class="service-step-desc">Clear reporting structures, SLA dashboards, and compliance frameworks.</p></div><div class="service-step-card" data-anim="fade-left" data-anim-delay="400"><span class="service-step-num">04</span><h4 class="service-step-title">Continuous Scale</h4><p class="service-step-desc">Scale resources up or down dynamically as project milestones require.</p></div>
+                    </div>
+                </div>
+            </section>
 
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 03</div>
-        <h3 class="service-card-title">Talent Cloud & Global Reach</h3>
-        <p class="service-card-desc">Access high-caliber engineering hubs across the US, Canada, and India without international legal friction.</p>
-    </div>
-</div>
-
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 04</div>
-        <h3 class="service-card-title">Compliance & Payroll Handling</h3>
-        <p class="service-card-desc">Streamlined worker classification, risk mitigation, and unified billing across all contingent technical staff.</p>
-    </div>
-</div>
-
+            <!-- 4. Engineering Standards -->
+            <section class="service-standards-section">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Technical Benchmarks</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            Engineering <em>Standards.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            The non-negotiable architectural principles and tooling foundations that guide every build.
+                        </p>
+                    </div>
+                    <div class="service-specs-table" data-anim="fade-up" data-anim-delay="150">
+                        <div class="service-spec-row" data-anim="fade-right" data-anim-delay="80"><span class="service-spec-label">Delivery Model</span><span class="service-spec-val">Outcome-based SLAs, sprint capacity pods, or hybrid staff consolidation</span></div><div class="service-spec-row" data-anim="fade-left" data-anim-delay="160"><span class="service-spec-label">Management</span><span class="service-spec-val">Assigned Delivery Director with weekly milestone tracking & burn-down analytics</span></div><div class="service-spec-row" data-anim="fade-right" data-anim-delay="240"><span class="service-spec-label">Legal Governance</span><span class="service-spec-val">Complete employer-of-record (EOR) protection, IP assignment, and NDAs</span></div><div class="service-spec-row" data-anim="fade-left" data-anim-delay="320"><span class="service-spec-label">Billing</span><span class="service-spec-val">Unified transparent monthly invoicing with zero hidden recruitment surcharges</span></div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <script src="/assets/js/animations.js"></script>
 </body>
 </html>

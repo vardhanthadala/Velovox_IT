@@ -3,10 +3,10 @@
  * 
  * - Full 3D kinetic character & word splitting for headings
  * - Staggered card fade-up with spring physics easing
- * - Directional block & media slide-ins
- * - Alternating depth elevations for grid showcases
- * - Ambient floating micro-motions
- * - Complete accessibility (aria-label/aria-hidden) & reduced-motion fallback
+ * - 4-way directional smooth entrances (Left-Right, Right-Left, Top-Bottom, Bottom-Top)
+ * - Single-Page-App (SPA) & Dynamic Route Aware: Replays animations cleanly on navigation
+ * - Re-triggering scroll reveal (lazy load on scroll into view and out of view)
+ * - Strict accessibility & reduced-motion fallback
  */
 
 (function () {
@@ -123,7 +123,45 @@
   }
 
   /**
-   * Main observer
+   * Shared IntersectionObserver for continuous scroll entrance
+   */
+  let animObserver = null;
+
+  function getObserver() {
+    if (!animObserver) {
+      animObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+              const delay = el.getAttribute('data-anim-delay');
+              if (delay) el.style.transitionDelay = `${delay}ms`;
+
+              const duration = el.getAttribute('data-anim-duration');
+              if (duration) el.style.transitionDuration = `${duration}ms`;
+
+              requestAnimationFrame(() => {
+                el.classList.add('is-animated');
+              });
+
+              if (el.hasAttribute('data-count')) {
+                runCounter(el);
+              }
+              el.querySelectorAll('[data-count]').forEach(runCounter);
+            } else {
+              // Reset state when scrolled completely out of view so it re-animates smoothly on re-entry
+              el.classList.remove('is-animated');
+            }
+          });
+        },
+        { root: null, rootMargin: '0px 0px -40px 0px', threshold: 0.08 }
+      );
+    }
+    return animObserver;
+  }
+
+  /**
+   * Main initializer: observes new or existing DOM elements
    */
   function init() {
     if (prefersReducedMotion) {
@@ -134,60 +172,64 @@
       return;
     }
 
+    const obs = getObserver();
+
     // Process all headings
     document.querySelectorAll('.title-animation').forEach(setupSplitHeading);
 
-    // Intersection Observer setup
-    if (!window.__siteAnimObserver) {
-      window.__siteAnimObserver = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const el = entry.target;
-
-              const delay = el.getAttribute('data-anim-delay');
-              if (delay) el.style.transitionDelay = `${delay}ms`;
-
-              const duration = el.getAttribute('data-anim-duration');
-              if (duration) el.style.transitionDuration = `${duration}ms`;
-
-              // Trigger transition
-              requestAnimationFrame(() => {
-                el.classList.add('is-animated');
-              });
-
-              // Counter trigger
-              if (el.hasAttribute('data-count')) {
-                runCounter(el);
-              }
-              el.querySelectorAll('[data-count]').forEach(runCounter);
-
-              if (!el.hasAttribute('data-anim-repeat')) {
-                obs.unobserve(el);
-              }
-            } else {
-              // Lazy-load entrance animation on scroll (replay when scrolling into view)
-              el.classList.remove('is-animated');
-            }
-          });
-        },
-        { root: null, rootMargin: '50px 0px -5% 0px', threshold: 0.05 }
-      );
-    }
-
+    // Observe all animatable elements
     document.querySelectorAll('.title-animation, [data-anim], [data-count], .split-lines-reveal').forEach((el) => {
       if (!el.dataset.animObserved) {
         el.dataset.animObserved = 'true';
-        window.__siteAnimObserver.observe(el);
+        obs.observe(el);
       }
-      // If element is already in the viewport upon page load, immediately mark active
+
+      // Check if already in viewport
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (inView) {
+        const delay = el.getAttribute('data-anim-delay');
+        if (delay) el.style.transitionDelay = `${delay}ms`;
+
         requestAnimationFrame(() => {
           el.classList.add('is-animated');
         });
+        if (el.hasAttribute('data-count')) runCounter(el);
       }
     });
+  }
+
+  let replayTimeout = null;
+
+  /**
+   * Reset & Replay: specifically invoked when navigating between routes/slugs
+   * Debounced so rapid triggers never stutter or re-fire 3-4 times.
+   */
+  function resetAndReplay() {
+    if (replayTimeout) {
+      clearTimeout(replayTimeout);
+    }
+    replayTimeout = setTimeout(() => {
+      const obs = getObserver();
+
+      // Unobserve and reset elements
+      document.querySelectorAll('.title-animation, [data-anim], [data-count], .split-lines-reveal').forEach((el) => {
+        el.classList.remove('is-animated');
+        delete el.dataset.counterDone;
+        obs.unobserve(el);
+        delete el.dataset.animObserved;
+      });
+
+      // Reset headings if their text or structure changed
+      document.querySelectorAll('.title-animation').forEach((heading) => {
+        delete heading.dataset.splitDone;
+      });
+
+      // Re-initialize with clean micro-tick
+      requestAnimationFrame(() => {
+        init();
+      });
+    }, 40);
   }
 
   // Bind initial DOM and load events
@@ -198,13 +240,28 @@
   }
   window.addEventListener('load', init);
 
-  // Re-run hook for React lifecycle
+  // Expose global methods for React router / SPA
   window.refreshSiteAnimations = init;
+  window.replaySiteAnimations = resetAndReplay;
 
-  // React dynamic component observer
-  const mutObserver = new MutationObserver(() => {
-    init();
+  // MutationObserver for SPA DOM updates (debounced to avoid re-triggering during render cycles)
+  let mutTimeout = null;
+  const mutObserver = new MutationObserver((mutations) => {
+    let hasRelevantAdd = false;
+    for (let i = 0; i < mutations.length; i++) {
+      if (mutations[i].addedNodes.length > 0) {
+        hasRelevantAdd = true;
+        break;
+      }
+    }
+    if (hasRelevantAdd) {
+      if (mutTimeout) clearTimeout(mutTimeout);
+      mutTimeout = setTimeout(() => {
+        init();
+      }, 100);
+    }
   });
+
   if (document.body) {
     mutObserver.observe(document.body, { childList: true, subtree: true });
   } else {
@@ -212,13 +269,5 @@
       mutObserver.observe(document.body, { childList: true, subtree: true });
     });
   }
-
-  // Periodic poll to ensure zero race conditions during React render
-  let ticks = 0;
-  const poll = setInterval(() => {
-    init();
-    ticks++;
-    if (ticks > 20) clearInterval(poll);
-  }, 250);
 
 })();

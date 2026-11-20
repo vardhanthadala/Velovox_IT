@@ -19,67 +19,104 @@
 </head>
 <body class="antialiased">
     <div id="root">
-        <!-- Static prerender for fast first paint before React mounts -->
         <main>
-            <section class="service-detail-hero">
-                <div class="max-w-7xl mx-auto px-6">
-                    <span class="service-kicker">Technical Talent</span>
-                    <h1 class="service-hero-title">The right engineer, <em>on demand.</em></h1>
-                    <p class="service-hero-desc">Elite contract and permanent technical talent tailored to your stack, timeline, and company culture. We cut through the hiring noise so your roadmaps never stall.</p>
-                    <div class="flex items-center gap-4">
-                        <a href="/contact" class="group px-7 py-3.5 inline-flex items-center justify-center bg-black text-sm font-medium leading-5 text-white rounded-full hover:bg-gray-800 transition-all duration-300">
-                            GET STARTED &rarr;
-                        </a>
-                        <a href="/portfolio" class="px-7 py-3.5 inline-flex items-center justify-center bg-white border border-gray-300 text-sm font-medium leading-5 text-black rounded-full hover:bg-gray-50 transition-all duration-300">
-                            VIEW CASE STUDIES
-                        </a>
+            <!-- 1. Clean Text Hero Section -->
+            <section class="service-clean-hero">
+                <div class="max-w-7xl mx-auto px-6 service-hero-inner">
+                    
+                    <div class="service-hero-header-row">
+                        <div data-anim="fade-right" data-anim-delay="100">
+                            <span class="service-kicker" data-anim="fade-down" data-anim-delay="50">Engineering Talent Acquisition</span>
+                            <h1 class="service-hero-title title-animation" data-variant="A">
+                                The right engineer, <em>on demand.</em>
+                            </h1>
+                        </div>
+                        <div class="service-hero-lead-col" data-anim="fade-left" data-anim-delay="150">
+                            <p class="service-hero-desc" data-anim="fade-up" data-anim-delay="100">Elite contract and permanent technical talent tailored to your stack, timeline, and company culture. We cut through the hiring noise so your roadmaps never stall.</p>
+                            </div>
+                    </div>
+                    
+                    <!-- Big Representative Service Image -->
+                    <div class="service-hero-visual-container" data-anim="fade-up" data-anim-delay="180">
+                        <div class="service-hero-visual-frame">
+                            <img src="/images/services/hero-images/staffing-services.jpg" alt="Specialized Technical Staffing and Engineering Talent" class="service-hero-visual-img" loading="eager" />
+                            
+                            </div>
+                    </div>
+
+                    <!-- Metrics Bar -->
+                    <div class="service-hero-metrics-bar" data-anim="fade-up" data-anim-delay="220">
+                    </div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="80"><span class="service-metric-val">94%</span><span class="service-metric-label">First-Interview Acceptance Rate</span></div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="160"><span class="service-metric-val">Top 3%</span><span class="service-metric-label">Strict Technical Vetting Bar</span></div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="240"><span class="service-metric-val">6 Months</span><span class="service-metric-label">Average Contract Retention</span></div>
                     </div>
                 </div>
             </section>
             
-            <section class="service-capabilities-section">
+            <!-- 2. Interactive Tabbed Showcase (3 Unique Images) -->
+            <section class="service-showcase-section">
                 <div class="max-w-7xl mx-auto px-6">
-                    <div class="service-grid-header">
-                        <h2 class="service-grid-title">Key Capabilities &amp; <em>Impact</em></h2>
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Interactive Capabilities</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            Capabilities &amp; <em>Visual Proof.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            Select a capability below to inspect our production architecture and delivered workflows.
+                        </p>
                     </div>
-                    <div class="service-cards-grid">
-                        
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 01</div>
-        <h3 class="service-card-title">Contract & Augmentation</h3>
-        <p class="service-card-desc">Pre-vetted senior software engineers, cloud architects, and QA specialists integrated directly into your existing sprints.</p>
-    </div>
-</div>
+                    <div class="service-showcase-container">
+                        <!-- Left Tabs -->
+                        <div class="service-tabs-column">
+                            <div class="service-tab-button is-active" data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 01</span><span class="service-tab-tag">Team Augment</span></div><h3 class="service-tab-title">Sprint Staff Augmentation</h3><p class="service-tab-desc">Senior software engineers and QA leads seamlessly integrated into your daily standups, Jira backlog, and sprint cadence.</p></div><div class="service-tab-button " data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 02</span><span class="service-tab-tag">Leadership</span></div><h3 class="service-tab-title">Executive & Staff+ Technical Search</h3><p class="service-tab-desc">Targeted full-cycle headhunting for Staff+ engineers, Principal Architects, and VP-level engineering leadership.</p></div><div class="service-tab-button " data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 03</span><span class="service-tab-tag">Vetting</span></div><h3 class="service-tab-title">Rigorous Technical Pairing & Vetting</h3><p class="service-tab-desc">Live code pairing, architectural design interviews, and deep cultural vetting ensuring zero mismatches.</p></div>
+                        </div>
+                        <!-- Right Active Visual -->
+                        <div class="service-showcase-visual-wrap" data-anim="fade-left" data-anim-delay="120">
+                            <img src="/images/services/staffing-services-1.jpg" alt="Sprint Staff Augmentation" class="service-showcase-img" loading="eager">
+                            <div class="service-showcase-overlay"></div>
+                            <div class="service-showcase-caption-bar">
+                                <span class="service-showcase-caption-text">Dedicated Sprint Squad Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 02</div>
-        <h3 class="service-card-title">Direct-Hire Technical Search</h3>
-        <p class="service-card-desc">Full-cycle recruitment of high-impact leaders, engineering managers, and specialized domain architects.</p>
-    </div>
-</div>
+            <!-- 3. Process Workflow -->
+            <section class="service-workflow-section">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Engagement Model</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            How We <em>Deliver.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            A disciplined, four-phase delivery cycle that eliminates friction and enforces transparency.
+                        </p>
+                    </div>
+                    <div class="service-process-grid">
+                        <div class="service-step-card" data-anim="fade-right" data-anim-delay="100"><span class="service-step-num">01</span><h4 class="service-step-title">Stack Profile</h4><p class="service-step-desc">We map your exact tech stack, team seniority mix, and communication tempo.</p></div><div class="service-step-card" data-anim="fade-down" data-anim-delay="200"><span class="service-step-num">02</span><h4 class="service-step-title">Candidate Screen</h4><p class="service-step-desc">We filter our pre-vetted network down to top matched senior candidates.</p></div><div class="service-step-card" data-anim="fade-up" data-anim-delay="300"><span class="service-step-num">03</span><h4 class="service-step-title">Direct Pairing</h4><p class="service-step-desc">You interview candidates directly with zero recruiter middlemen delays.</p></div><div class="service-step-card" data-anim="fade-left" data-anim-delay="400"><span class="service-step-num">04</span><h4 class="service-step-title">Sprint Integration</h4><p class="service-step-desc">Seamless onboarding with day-one access, tooling sync, and active check-ins.</p></div>
+                    </div>
+                </div>
+            </section>
 
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 03</div>
-        <h3 class="service-card-title">Contract-to-Hire Placement</h3>
-        <p class="service-card-desc">Evaluate specialized engineering contributors in production workflows before making long-term commitments.</p>
-    </div>
-</div>
-
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 04</div>
-        <h3 class="service-card-title">Vetted Rigor & Skill Matching</h3>
-        <p class="service-card-desc">Rigorous live code pairing, architectural vetting, and cultural alignment before any candidate is presented.</p>
-    </div>
-</div>
-
+            <!-- 4. Engineering Standards -->
+            <section class="service-standards-section">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Technical Benchmarks</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            Engineering <em>Standards.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            The non-negotiable architectural principles and tooling foundations that guide every build.
+                        </p>
+                    </div>
+                    <div class="service-specs-table" data-anim="fade-up" data-anim-delay="150">
+                        <div class="service-spec-row" data-anim="fade-right" data-anim-delay="80"><span class="service-spec-label">Vetting Methodology</span><span class="service-spec-val">Live architecture pairing, algorithmic depth, and production debugging tests</span></div><div class="service-spec-row" data-anim="fade-left" data-anim-delay="160"><span class="service-spec-label">Experience Tier</span><span class="service-spec-val">Minimum 5+ years commercial experience across high-scale distributed applications</span></div><div class="service-spec-row" data-anim="fade-right" data-anim-delay="240"><span class="service-spec-label">Timezone Coverage</span><span class="service-spec-val">Full alignment across US Eastern/Pacific, European GMT, and APAC engineering hours</span></div><div class="service-spec-row" data-anim="fade-left" data-anim-delay="320"><span class="service-spec-label">Guarantee</span><span class="service-spec-val">14-day zero-risk trial period on all contract engineering placements</span></div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <script src="/assets/js/animations.js"></script>
 </body>
 </html>

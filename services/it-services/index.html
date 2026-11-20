@@ -19,67 +19,104 @@
 </head>
 <body class="antialiased">
     <div id="root">
-        <!-- Static prerender for fast first paint before React mounts -->
         <main>
-            <section class="service-detail-hero">
-                <div class="max-w-7xl mx-auto px-6">
-                    <span class="service-kicker">Enterprise Solutions</span>
-                    <h1 class="service-hero-title">Engineered for <em>scale & precision.</em></h1>
-                    <p class="service-hero-desc">From custom enterprise software architecture to cloud modernization and high-throughput microservices, we build reliable digital systems designed to evolve with your business.</p>
-                    <div class="flex items-center gap-4">
-                        <a href="/contact" class="group px-7 py-3.5 inline-flex items-center justify-center bg-black text-sm font-medium leading-5 text-white rounded-full hover:bg-gray-800 transition-all duration-300">
-                            GET STARTED &rarr;
-                        </a>
-                        <a href="/portfolio" class="px-7 py-3.5 inline-flex items-center justify-center bg-white border border-gray-300 text-sm font-medium leading-5 text-black rounded-full hover:bg-gray-50 transition-all duration-300">
-                            VIEW CASE STUDIES
-                        </a>
+            <!-- 1. Clean Text Hero Section -->
+            <section class="service-clean-hero">
+                <div class="max-w-7xl mx-auto px-6 service-hero-inner">
+                    
+                    <div class="service-hero-header-row">
+                        <div data-anim="fade-right" data-anim-delay="100">
+                            <span class="service-kicker" data-anim="fade-down" data-anim-delay="50">Enterprise Systems & Cloud Engineering</span>
+                            <h1 class="service-hero-title title-animation" data-variant="A">
+                                Engineered for <em>scale & precision.</em>
+                            </h1>
+                        </div>
+                        <div class="service-hero-lead-col" data-anim="fade-left" data-anim-delay="150">
+                            <p class="service-hero-desc" data-anim="fade-up" data-anim-delay="100">From custom enterprise software architecture to cloud modernization and high-throughput microservices, we build reliable digital systems designed to evolve with your business.</p>
+                            </div>
+                    </div>
+                    
+                    <!-- Big Representative Service Image -->
+                    <div class="service-hero-visual-container" data-anim="fade-up" data-anim-delay="180">
+                        <div class="service-hero-visual-frame">
+                            <img src="/images/services/hero-images/it-services.jpg" alt="IT Services Cloud & Infrastructure Architecture" class="service-hero-visual-img" loading="eager" />
+                            
+                            </div>
+                    </div>
+
+                    <!-- Metrics Bar -->
+                    <div class="service-hero-metrics-bar" data-anim="fade-up" data-anim-delay="220">
+                    </div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="80"><span class="service-metric-val"><120ms</span><span class="service-metric-label">Core API Latency</span></div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="160"><span class="service-metric-val">100%</span><span class="service-metric-label">Automated CI/CD Test Coverage</span></div><div class="service-metric-item" data-anim="fade-up" data-anim-delay="240"><span class="service-metric-val">SOC 2</span><span class="service-metric-label">Readiness & Compliance</span></div>
                     </div>
                 </div>
             </section>
             
-            <section class="service-capabilities-section">
+            <!-- 2. Interactive Tabbed Showcase (3 Unique Images) -->
+            <section class="service-showcase-section">
                 <div class="max-w-7xl mx-auto px-6">
-                    <div class="service-grid-header">
-                        <h2 class="service-grid-title">Key Capabilities &amp; <em>Impact</em></h2>
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Interactive Capabilities</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            Capabilities &amp; <em>Visual Proof.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            Select a capability below to inspect our production architecture and delivered workflows.
+                        </p>
                     </div>
-                    <div class="service-cards-grid">
-                        
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 01</div>
-        <h3 class="service-card-title">Full-Stack Software Architecture</h3>
-        <p class="service-card-desc">Scalable, resilient web applications built with modern frontend frameworks and robust backend microservices.</p>
-    </div>
-</div>
+                    <div class="service-showcase-container">
+                        <!-- Left Tabs -->
+                        <div class="service-tabs-column">
+                            <div class="service-tab-button is-active" data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 01</span><span class="service-tab-tag">Cloud Ops</span></div><h3 class="service-tab-title">Cloud Infrastructure & Server Fabrics</h3><p class="service-tab-desc">Automated multi-region cloud topology with Kubernetes, Terraform IaC, and 99.99% high-availability guarantees.</p></div><div class="service-tab-button " data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 02</span><span class="service-tab-tag">Architecture</span></div><h3 class="service-tab-title">Microservices & Distributed Systems</h3><p class="service-tab-desc">Event-driven backends, asynchronous queue pipelines, and decoupled microservices that handle peak concurrent workloads with zero degradation.</p></div><div class="service-tab-button " data-anim="fade-up"><div class="service-tab-header"><span class="service-tab-num">// 03</span><span class="service-tab-tag">Zero-Trust</span></div><h3 class="service-tab-title">Hardware Acceleration & Platform Security</h3><p class="service-tab-desc">End-to-end data encryption, automated vulnerability scanning, database partitioning, and strict SOC 2 enterprise compliance.</p></div>
+                        </div>
+                        <!-- Right Active Visual -->
+                        <div class="service-showcase-visual-wrap" data-anim="fade-left" data-anim-delay="120">
+                            <img src="/images/services/it-services-1.jpg" alt="Cloud Infrastructure & Server Fabrics" class="service-showcase-img" loading="eager">
+                            <div class="service-showcase-overlay"></div>
+                            <div class="service-showcase-caption-bar">
+                                <span class="service-showcase-caption-text">Multi-Region Cloud Topology & Virtual Fabrics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 02</div>
-        <h3 class="service-card-title">Cloud Engineering & DevOps</h3>
-        <p class="service-card-desc">CI/CD pipelines, container orchestration, multi-region AWS/GCP deployments, and 99.99% uptime reliability.</p>
-    </div>
-</div>
+            <!-- 3. Process Workflow -->
+            <section class="service-workflow-section">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Engagement Model</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            How We <em>Deliver.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            A disciplined, four-phase delivery cycle that eliminates friction and enforces transparency.
+                        </p>
+                    </div>
+                    <div class="service-process-grid">
+                        <div class="service-step-card" data-anim="fade-right" data-anim-delay="100"><span class="service-step-num">01</span><h4 class="service-step-title">Architecture Audit</h4><p class="service-step-desc">We evaluate your tech debt, bottleneck dependencies, and throughput thresholds.</p></div><div class="service-step-card" data-anim="fade-down" data-anim-delay="200"><span class="service-step-num">02</span><h4 class="service-step-title">System Blueprint</h4><p class="service-step-desc">We design clean modular domains, CI/CD gates, and infrastructure topologies.</p></div><div class="service-step-card" data-anim="fade-up" data-anim-delay="300"><span class="service-step-num">03</span><h4 class="service-step-title">Iterative Build</h4><p class="service-step-desc">Bi-weekly sprint releases with strict code review, linting, and automated tests.</p></div><div class="service-step-card" data-anim="fade-left" data-anim-delay="400"><span class="service-step-num">04</span><h4 class="service-step-title">Production Hardening</h4><p class="service-step-desc">Chaos testing, zero-downtime deployment cutovers, and telemetry monitoring.</p></div>
+                    </div>
+                </div>
+            </section>
 
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 03</div>
-        <h3 class="service-card-title">API & Platform Integration</h3>
-        <p class="service-card-desc">Secure RESTful and GraphQL APIs engineered to seamlessly link legacy enterprise tools with next-gen platforms.</p>
-    </div>
-</div>
-
-<div class="service-cap-card">
-    <div>
-        <div class="service-card-num">CAPABILITY // 04</div>
-        <h3 class="service-card-title">Database & Performance Tuning</h3>
-        <p class="service-card-desc">Low-latency query optimization, distributed caching architectures, and data security governance at scale.</p>
-    </div>
-</div>
-
+            <!-- 4. Engineering Standards -->
+            <section class="service-standards-section">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="service-section-header">
+                        <span class="service-kicker" data-anim="fade-down">Technical Benchmarks</span>
+                        <h2 class="service-section-title title-animation" data-variant="B">
+                            Engineering <em>Standards.</em>
+                        </h2>
+                        <p class="service-section-subtitle" data-anim="fade-up" data-anim-delay="100">
+                            The non-negotiable architectural principles and tooling foundations that guide every build.
+                        </p>
+                    </div>
+                    <div class="service-specs-table" data-anim="fade-up" data-anim-delay="150">
+                        <div class="service-spec-row" data-anim="fade-right" data-anim-delay="80"><span class="service-spec-label">Core Stacks</span><span class="service-spec-val">TypeScript, Python, Go, Node.js, React, Next.js, Java / Spring Boot</span></div><div class="service-spec-row" data-anim="fade-left" data-anim-delay="160"><span class="service-spec-label">Cloud & Ops</span><span class="service-spec-val">AWS, Google Cloud, Microsoft Azure, Kubernetes, Docker, Terraform</span></div><div class="service-spec-row" data-anim="fade-right" data-anim-delay="240"><span class="service-spec-label">Data & Caching</span><span class="service-spec-val">PostgreSQL, MongoDB, Redis, Apache Kafka, Elasticsearch</span></div><div class="service-spec-row" data-anim="fade-left" data-anim-delay="320"><span class="service-spec-label">Quality Standards</span><span class="service-spec-val">Strict static analysis, zero-warning build gates, 85%+ branch unit test coverage</span></div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+    <script src="/assets/js/animations.js"></script>
 </body>
 </html>

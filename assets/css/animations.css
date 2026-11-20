@@ -90,30 +90,55 @@ html.js-animations-active .split-lines-reveal.is-animated .anim-line-inner {
    3. Directional & Depth Card Entrances
    ========================================================================== */
 
-/* Fade-Up: Smooth vertical rise + scale micro-depth */
-html.js-animations-active [data-anim="fade-up"] {
-  transform: translateY(32px);
+
+
+
+
+
+
+
+
+/* Left to Right (slide-right / fade-right / from-left): moves from -X to 0 */
+html.js-animations-active [data-anim="slide-right"],
+html.js-animations-active [data-anim="fade-right"],
+html.js-animations-active [data-anim="from-left"] {
+  transform: translate3d(-48px, 0, 0);
 }
 
-/* Fade-Down: Drop from top + scale micro-depth */
-html.js-animations-active [data-anim="fade-down"] {
-  transform: translateY(-32px);
+/* Right to Left (slide-left / fade-left / from-right): moves from +X to 0 */
+html.js-animations-active [data-anim="slide-left"],
+html.js-animations-active [data-anim="fade-left"],
+html.js-animations-active [data-anim="from-right"] {
+  transform: translate3d(48px, 0, 0);
 }
 
-/* Slide-Left: Block slide from left */
-html.js-animations-active [data-anim="slide-left"] {
-  transform: translateX(-48px);
+/* Top to Bottom (fade-down / slide-down / from-top): moves from -Y to 0 */
+html.js-animations-active [data-anim="fade-down"],
+html.js-animations-active [data-anim="slide-down"],
+html.js-animations-active [data-anim="from-top"] {
+  transform: translate3d(0, -36px, 0);
 }
 
-/* Slide-Right: Block slide from right */
-html.js-animations-active [data-anim="slide-right"] {
-  transform: translateX(48px);
+/* Bottom to Top (fade-up / slide-up / from-bottom): moves from +Y to 0 */
+html.js-animations-active [data-anim="fade-up"],
+html.js-animations-active [data-anim="slide-up"],
+html.js-animations-active [data-anim="from-bottom"] {
+  transform: translate3d(0, 36px, 0);
 }
 
-/* Active State */
+/* Ultra-smooth lazy load scroll entrance transitions */
+html.js-animations-active [data-anim] {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition-property: transform, opacity;
+  transition-duration: 0.85s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Active Entrance State */
 html.js-animations-active [data-anim].is-animated {
   opacity: 1 !important;
-  transform: translate(0, 0) scale(1) !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
 }
 
 /* ==========================================================================
@@ -128,20 +153,28 @@ html.js-animations-active [data-anim].is-animated {
    5. Mobile Optimization (Screens < 768px): 50% translation reductions
    ========================================================================== */
 @media (max-width: 767px) {
-  html.js-animations-active [data-anim="fade-up"] {
-    transform: translateY(22px) scale(0.98);
+  html.js-animations-active [data-anim="slide-right"],
+  html.js-animations-active [data-anim="fade-right"],
+  html.js-animations-active [data-anim="from-left"] {
+    transform: translate3d(-24px, 0, 0);
   }
 
-  html.js-animations-active [data-anim="fade-down"] {
-    transform: translateY(-22px) scale(0.98);
+  html.js-animations-active [data-anim="slide-left"],
+  html.js-animations-active [data-anim="fade-left"],
+  html.js-animations-active [data-anim="from-right"] {
+    transform: translate3d(24px, 0, 0);
   }
 
-  html.js-animations-active [data-anim="slide-left"] {
-    transform: translateX(-40px);
+  html.js-animations-active [data-anim="fade-down"],
+  html.js-animations-active [data-anim="slide-down"],
+  html.js-animations-active [data-anim="from-top"] {
+    transform: translate3d(0, -20px, 0);
   }
 
-  html.js-animations-active [data-anim="slide-right"] {
-    transform: translateX(40px);
+  html.js-animations-active [data-anim="fade-up"],
+  html.js-animations-active [data-anim="slide-up"],
+  html.js-animations-active [data-anim="from-bottom"] {
+    transform: translate3d(0, 20px, 0);
   }
 
   html.js-animations-active .title-animation[data-variant="A"] .anim-char,
