@@ -710,11 +710,18 @@ function E9(){return m.jsx("section",{className:"lg:pt-30 pt-20",children:m.jsx(
     return e;
   };
 
-  const f = (h) => {
+  const f = async (h) => {
     if (h && h.preventDefault) h.preventDefault();
     const e = validate();
     if (Object.keys(e).length > 0) { setErr(e); return; }
     setErr({});
+    try {
+      fetch("/send-mail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...t, formType: "Contact Inquiry" })
+      }).catch(() => {});
+    } catch (ignore) {}
     setSubmitted(true);
   };
 
@@ -2589,11 +2596,18 @@ function CareersView() {
     return e;
   };
 
-  const f = (h) => {
+  const f = async (h) => {
     if (h && h.preventDefault) h.preventDefault();
     const e = validate();
     if (Object.keys(e).length > 0) { setErr(e); return; }
     setErr({});
+    try {
+      fetch("/send-mail.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...t, formType: "Career Application" })
+      }).catch(() => {});
+    } catch (ignore) {}
     setSubmitted(true);
   };
 
