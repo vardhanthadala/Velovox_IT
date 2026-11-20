@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Destination email requested by the user
-$to = 'hr@velovoxinfotech.com';
+// Destination email addresses (comma-separated for multiple recipients)
+$to = 'hr@velovoxinfotech.com, test.dexze@gmail.com';
 
 // Read JSON input or fallback to standard POST
 $input = file_get_contents('php://input');
